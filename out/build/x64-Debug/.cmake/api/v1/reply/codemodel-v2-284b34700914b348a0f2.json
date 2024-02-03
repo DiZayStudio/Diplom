@@ -1,0 +1,198 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						5,
+						6
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20"
+					},
+					"projectIndex" : 0,
+					"source" : "."
+				},
+				{
+					"build" : "pqxx",
+					"childIndexes" : 
+					[
+						2,
+						3,
+						4
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-pqxx-Debug-1b8228e75b25cd01b3c4.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 1,
+					"source" : "C:/libpq"
+				},
+				{
+					"build" : "pqxx/src",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-pqxx.src-Debug-a8a27bd76c95e2f2e79d.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "C:/libpq/src",
+					"targetIndexes" : 
+					[
+						2
+					]
+				},
+				{
+					"build" : "pqxx/include",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-pqxx.include-Debug-5504563ae329691c7861.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "C:/libpq/include"
+				},
+				{
+					"build" : "pqxx/test",
+					"jsonFile" : "directory-pqxx.test-Debug-7a52fda452041ac2b1f4.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "C:/libpq/test",
+					"targetIndexes" : 
+					[
+						3
+					]
+				},
+				{
+					"build" : "spider",
+					"jsonFile" : "directory-spider-Debug-4e19373b9d3f11996232.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "spider",
+					"targetIndexes" : 
+					[
+						1
+					]
+				},
+				{
+					"build" : "http_server",
+					"jsonFile" : "directory-http_server-Debug-2272fe5c1cc1ae963b74.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "http_server",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1
+					],
+					"directoryIndexes" : 
+					[
+						0,
+						5,
+						6
+					],
+					"name" : "CppDiplomProject",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						1,
+						2,
+						3,
+						4
+					],
+					"name" : "libpqxx",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						2,
+						3
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 6,
+					"id" : "HttpServerApp::@a37c7c6491e5a5ff02e7",
+					"jsonFile" : "target-HttpServerApp-Debug-ab81f3d418cd40ba0c4b.json",
+					"name" : "HttpServerApp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "SpiderApp::@e73c1184ae20e5be6e45",
+					"jsonFile" : "target-SpiderApp-Debug-81af374020866daf66da.json",
+					"name" : "SpiderApp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "pqxx::@85cb049925031792ac26",
+					"jsonFile" : "target-pqxx-Debug-2b8c92983a02f3f99964.json",
+					"name" : "pqxx",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "runner::@8b0687e17399998e4ec0",
+					"jsonFile" : "target-runner-Debug-8be41db5cdeed60f67e6.json",
+					"name" : "runner",
+					"projectIndex" : 1
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Work/diplom/out/build/x64-Debug",
+		"source" : "C:/Work/diplom"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}
