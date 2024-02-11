@@ -27,12 +27,15 @@ void DataBase::CreateTable() {
 void DataBase::InsertData(const std::map<std::string, int>& words, const Link& link) {
 	pqxx::work tx{ *c_ };
 	std::string query;
-	for (const auto element : words) {
-		// сохраняем ссылку
-		query = "INSERT INTO Documents VALUES ( nextval('words_id_seq'::regclass), "
-			"'" + std::to_string(int(link.protocol)) + "', '" + link.hostName + "', '" + link.query + "')";
-		tx.exec(query);
 
+	// сохраняем ссылку
+	query = "INSERT INTO Documents VALUES ( nextval('words_id_seq'::regclass), "
+		"'" + std::to_string(int(link.protocol)) + "', '" + link.hostName + "', '" + link.query + "')";
+	tx.exec(query);
+
+	//int id_document = tx.query_value<std::int>("SELECT id FROM Documents WHERE id = 3");
+	 
+	for (const auto element : words) {
 		query = "INSERT INTO words VALUES ( nextval('words_id_seq'::regclass), '" + element.first + "')";
 		tx.exec(query);
 		// загрузить индекс слова

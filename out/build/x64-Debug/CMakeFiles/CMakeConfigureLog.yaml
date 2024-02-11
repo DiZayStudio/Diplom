@@ -35663,3 +35663,1566 @@ events:
         
       exitCode: 0
 ...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/libpq/cmake/config.cmake:54 (try_compile)"
+      - "C:/libpq/CMakeLists.txt:27 (include)"
+    directories:
+      source: "C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp"
+      binary: "C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/libpq/cmake"
+      VCPKG_APPLOCAL_DEPS: "ON"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "C:/src/vcpkg"
+    buildResult:
+      variable: "PQXX_HAVE_GCC_PURE"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_9e306
+        [1/2] C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1438~1.331\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /EHsc  /Zi /Ob0 /Od /RTC1 -std:c++17 -MDd /showIncludes /FoCMakeFiles\\cmTC_9e306.dir\\gcc_pure.cxx.obj /FdCMakeFiles\\cmTC_9e306.dir\\ /FS -c C:\\libpq\\config-tests\\gcc_pure.cxx
+        FAILED: CMakeFiles/cmTC_9e306.dir/gcc_pure.cxx.obj 
+        C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1438~1.331\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /EHsc  /Zi /Ob0 /Od /RTC1 -std:c++17 -MDd /showIncludes /FoCMakeFiles\\cmTC_9e306.dir\\gcc_pure.cxx.obj /FdCMakeFiles\\cmTC_9e306.dir\\ /FS -c C:\\libpq\\config-tests\\gcc_pure.cxx
+        C:\\libpq\\config-tests\\gcc_pure.cxx(2): error C2065: pure: необъявленный идентификатор
+        C:\\libpq\\config-tests\\gcc_pure.cxx(2): error C2146: синтаксическая ошибка: отсутствие ";" перед идентификатором "f"
+        C:\\libpq\\config-tests\\gcc_pure.cxx(2): error C2059: синтаксическая ошибка: )
+        C:\\libpq\\config-tests\\gcc_pure.cxx(3): error C2143: синтаксическая ошибка: отсутствие ";" перед "{"
+        C:\\libpq\\config-tests\\gcc_pure.cxx(3): error C2447: {: отсутствует заголовок функции (возможно, используется формальный список старого типа)
+        C:\\libpq\\config-tests\\gcc_pure.cxx(9): error C3861: f: идентификатор не найден
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/libpq/cmake/config.cmake:58 (try_compile)"
+      - "C:/libpq/CMakeLists.txt:27 (include)"
+    directories:
+      source: "C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp"
+      binary: "C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/libpq/cmake"
+      VCPKG_APPLOCAL_DEPS: "ON"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "C:/src/vcpkg"
+    buildResult:
+      variable: "PQXX_HAVE_GCC_VISIBILITY"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_bb229
+        [1/2] C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1438~1.331\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /EHsc  /Zi /Ob0 /Od /RTC1 -std:c++17 -MDd /showIncludes /FoCMakeFiles\\cmTC_bb229.dir\\gcc_visibility.cxx.obj /FdCMakeFiles\\cmTC_bb229.dir\\ /FS -c C:\\libpq\\config-tests\\gcc_visibility.cxx
+        FAILED: CMakeFiles/cmTC_bb229.dir/gcc_visibility.cxx.obj 
+        C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1438~1.331\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /EHsc  /Zi /Ob0 /Od /RTC1 -std:c++17 -MDd /showIncludes /FoCMakeFiles\\cmTC_bb229.dir\\gcc_visibility.cxx.obj /FdCMakeFiles\\cmTC_bb229.dir\\ /FS -c C:\\libpq\\config-tests\\gcc_visibility.cxx
+        C:\\libpq\\config-tests\\gcc_visibility.cxx(2): error C2143: синтаксическая ошибка: отсутствие ")" перед "("
+        C:\\libpq\\config-tests\\gcc_visibility.cxx(2): error C2079: "visibility" использует не имеющую определения структуру struct "__attribute__"
+        C:\\libpq\\config-tests\\gcc_visibility.cxx(2): error C2440: инициализация: невозможно преобразовать "const char [7]" в "int"
+        C:\\libpq\\config-tests\\gcc_visibility.cxx(2): note: Не существует контекста, в котором такое преобразование возможно
+        C:\\libpq\\config-tests\\gcc_visibility.cxx(2): error C2059: синтаксическая ошибка: )
+        C:\\libpq\\config-tests\\gcc_visibility.cxx(2): error C2059: синтаксическая ошибка: )
+        C:\\libpq\\config-tests\\gcc_visibility.cxx(2): error C2146: синтаксическая ошибка: отсутствие ";" перед идентификатором "D"
+        C:\\libpq\\config-tests\\gcc_visibility.cxx(3): error C2447: {: отсутствует заголовок функции (возможно, используется формальный список старого типа)
+        C:\\libpq\\config-tests\\gcc_visibility.cxx(10): error C2065: D: необъявленный идентификатор
+        C:\\libpq\\config-tests\\gcc_visibility.cxx(10): error C2146: синтаксическая ошибка: отсутствие ";" перед идентификатором "d"
+        C:\\libpq\\config-tests\\gcc_visibility.cxx(10): error C2065: d: необъявленный идентификатор
+        C:\\libpq\\config-tests\\gcc_visibility.cxx(11): error C2065: d: необъявленный идентификатор
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/libpq/cmake/config.cmake:63 (try_compile)"
+      - "C:/libpq/CMakeLists.txt:27 (include)"
+    directories:
+      source: "C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp"
+      binary: "C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/libpq/cmake"
+      VCPKG_APPLOCAL_DEPS: "ON"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "C:/src/vcpkg"
+    buildResult:
+      variable: "PQXX_HAVE_LIKELY"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_b6787
+        [1/2] C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1438~1.331\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /EHsc  /Zi /Ob0 /Od /RTC1 -std:c++17 -MDd /showIncludes /FoCMakeFiles\\cmTC_b6787.dir\\likely.cxx.obj /FdCMakeFiles\\cmTC_b6787.dir\\ /FS -c C:\\libpq\\config-tests\\likely.cxx
+        FAILED: CMakeFiles/cmTC_b6787.dir/likely.cxx.obj 
+        C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1438~1.331\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /EHsc  /Zi /Ob0 /Od /RTC1 -std:c++17 -MDd /showIncludes /FoCMakeFiles\\cmTC_b6787.dir\\likely.cxx.obj /FdCMakeFiles\\cmTC_b6787.dir\\ /FS -c C:\\libpq\\config-tests\\likely.cxx
+        C:\\libpq\\config-tests\\likely.cxx(6): error C2065: because: необъявленный идентификатор
+        C:\\libpq\\config-tests\\likely.cxx(6): error C2065: older: необъявленный идентификатор
+        C:\\libpq\\config-tests\\likely.cxx(6): error C2065: C: необъявленный идентификатор
+        C:\\libpq\\config-tests\\likely.cxx(6): error C2065: standard: необъявленный идентификатор
+        C:\\libpq\\config-tests\\likely.cxx(6): error C3861: deliberately_fail: идентификатор не найден
+        C:\\libpq\\config-tests\\likely.cxx(10): warning C5051: для атрибута [[likely]] требуется не менее "/std:c++20", он игнорируется
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/libpq/cmake/config.cmake:67 (try_compile)"
+      - "C:/libpq/CMakeLists.txt:27 (include)"
+    directories:
+      source: "C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp"
+      binary: "C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/libpq/cmake"
+      VCPKG_APPLOCAL_DEPS: "ON"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "C:/src/vcpkg"
+    buildResult:
+      variable: "PQXX_HAVE_CXA_DEMANGLE"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_6bd10
+        [1/2] C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1438~1.331\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /EHsc  /Zi /Ob0 /Od /RTC1 -std:c++17 -MDd /showIncludes /FoCMakeFiles\\cmTC_6bd10.dir\\cxa_demangle.cxx.obj /FdCMakeFiles\\cmTC_6bd10.dir\\ /FS -c C:\\libpq\\config-tests\\cxa_demangle.cxx
+        FAILED: CMakeFiles/cmTC_6bd10.dir/cxa_demangle.cxx.obj 
+        C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1438~1.331\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /EHsc  /Zi /Ob0 /Od /RTC1 -std:c++17 -MDd /showIncludes /FoCMakeFiles\\cmTC_6bd10.dir\\cxa_demangle.cxx.obj /FdCMakeFiles\\cmTC_6bd10.dir\\ /FS -c C:\\libpq\\config-tests\\cxa_demangle.cxx
+        C:\\libpq\\config-tests\\cxa_demangle.cxx(7): fatal error C1083: Не удается открыть файл включение: cxxabi.h: No such file or directory,
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/libpq/cmake/config.cmake:72 (try_compile)"
+      - "C:/libpq/CMakeLists.txt:27 (include)"
+    directories:
+      source: "C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp"
+      binary: "C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/libpq/cmake"
+      VCPKG_APPLOCAL_DEPS: "ON"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "C:/src/vcpkg"
+    buildResult:
+      variable: "PQXX_HAVE_CONCEPTS"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_0ec97
+        [1/2] C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1438~1.331\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /EHsc  /Zi /Ob0 /Od /RTC1 -std:c++17 -MDd /showIncludes /FoCMakeFiles\\cmTC_0ec97.dir\\concepts.cxx.obj /FdCMakeFiles\\cmTC_0ec97.dir\\ /FS -c C:\\libpq\\config-tests\\concepts.cxx
+        FAILED: CMakeFiles/cmTC_0ec97.dir/concepts.cxx.obj 
+        C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1438~1.331\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /EHsc  /Zi /Ob0 /Od /RTC1 -std:c++17 -MDd /showIncludes /FoCMakeFiles\\cmTC_0ec97.dir\\concepts.cxx.obj /FdCMakeFiles\\cmTC_0ec97.dir\\ /FS -c C:\\libpq\\config-tests\\concepts.cxx
+        C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\include\\ranges(11): warning STL4038: The contents of <ranges> are available only with C++20 or later.
+        C:\\libpq\\config-tests\\concepts.cxx(8): error C2061: синтаксическая ошибка: идентификатор "Foo"
+        C:\\libpq\\config-tests\\concepts.cxx(8): error C3083: ranges: символ слева от "::" должен представлять тип
+        C:\\libpq\\config-tests\\concepts.cxx(8): error C2039: "input_range": не является членом "std".
+        C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\include\\vector(25): note:  см. объявление "std"
+        C:\\libpq\\config-tests\\concepts.cxx(11): error C2061: синтаксическая ошибка: идентификатор "Foo"
+        C:\\libpq\\config-tests\\concepts.cxx(11): error C2065: F: необъявленный идентификатор
+        C:\\libpq\\config-tests\\concepts.cxx(11): error C2988: неопознанное объявление или определение шаблона
+        C:\\libpq\\config-tests\\concepts.cxx(11): error C2059: синтаксическая ошибка: const
+        C:\\libpq\\config-tests\\concepts.cxx(12): error C2143: синтаксическая ошибка: отсутствие ";" перед "{"
+        C:\\libpq\\config-tests\\concepts.cxx(12): error C2447: {: отсутствует заголовок функции (возможно, используется формальный список старого типа)
+        C:\\libpq\\config-tests\\concepts.cxx(20): error C3861: foo: идентификатор не найден
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/libpq/cmake/config.cmake:77 (try_compile)"
+      - "C:/libpq/CMakeLists.txt:27 (include)"
+    directories:
+      source: "C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp"
+      binary: "C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/libpq/cmake"
+      VCPKG_APPLOCAL_DEPS: "ON"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "C:/src/vcpkg"
+    buildResult:
+      variable: "PQXX_HAVE_SPAN"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_4a9c3
+        [1/2] C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1438~1.331\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /EHsc  /Zi /Ob0 /Od /RTC1 -std:c++17 -MDd /showIncludes /FoCMakeFiles\\cmTC_4a9c3.dir\\span.cxx.obj /FdCMakeFiles\\cmTC_4a9c3.dir\\ /FS -c C:\\libpq\\config-tests\\span.cxx
+        FAILED: CMakeFiles/cmTC_4a9c3.dir/span.cxx.obj 
+        C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1438~1.331\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /EHsc  /Zi /Ob0 /Od /RTC1 -std:c++17 -MDd /showIncludes /FoCMakeFiles\\cmTC_4a9c3.dir\\span.cxx.obj /FdCMakeFiles\\cmTC_4a9c3.dir\\ /FS -c C:\\libpq\\config-tests\\span.cxx
+        C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\include\\span(12): warning STL4038: The contents of <span> are available only with C++20 or later.
+        C:\\libpq\\config-tests\\span.cxx(6): error C2039: "span": не является членом "std".
+        predefined C++ types (compiler internal)(348): note:  см. объявление "std"
+        C:\\libpq\\config-tests\\span.cxx(6): error C2065: span: необъявленный идентификатор
+        C:\\libpq\\config-tests\\span.cxx(6): error C2062: тип "char" не требуется
+        C:\\libpq\\config-tests\\span.cxx(6): error C2143: синтаксическая ошибка: отсутствие ";" перед "{"
+        C:\\libpq\\config-tests\\span.cxx(6): error C2039: "size_t": не является членом "std".
+        predefined C++ types (compiler internal)(348): note:  см. объявление "std"
+        C:\\libpq\\config-tests\\span.cxx(6): error C2143: синтаксическая ошибка: отсутствие ";" перед "}"
+        C:\\libpq\\config-tests\\span.cxx(7): error C2039: "size": не является членом "std".
+        predefined C++ types (compiler internal)(348): note:  см. объявление "std"
+        C:\\libpq\\config-tests\\span.cxx(7): error C2065: args: необъявленный идентификатор
+        C:\\libpq\\config-tests\\span.cxx(7): error C3861: size: идентификатор не найден
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/libpq/cmake/config.cmake:81 (try_compile)"
+      - "C:/libpq/CMakeLists.txt:27 (include)"
+    directories:
+      source: "C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp"
+      binary: "C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/libpq/cmake"
+      VCPKG_APPLOCAL_DEPS: "ON"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "C:/src/vcpkg"
+    buildResult:
+      variable: "PQXX_HAVE_CHARCONV_FLOAT"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_c84cd
+        [1/2] C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1438~1.331\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /EHsc  /Zi /Ob0 /Od /RTC1 -std:c++17 -MDd /showIncludes /FoCMakeFiles\\cmTC_c84cd.dir\\charconv_float.cxx.obj /FdCMakeFiles\\cmTC_c84cd.dir\\ /FS -c C:\\libpq\\config-tests\\charconv_float.cxx
+        FAILED: CMakeFiles/cmTC_c84cd.dir/charconv_float.cxx.obj 
+        C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1438~1.331\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /EHsc  /Zi /Ob0 /Od /RTC1 -std:c++17 -MDd /showIncludes /FoCMakeFiles\\cmTC_c84cd.dir\\charconv_float.cxx.obj /FdCMakeFiles\\cmTC_c84cd.dir\\ /FS -c C:\\libpq\\config-tests\\charconv_float.cxx
+        C:\\libpq\\config-tests\\charconv_float.cxx(15): error C2146: синтаксическая ошибка: отсутствие ")" перед идентификатором "and"
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/libpq/cmake/config.cmake:85 (try_compile)"
+      - "C:/libpq/CMakeLists.txt:27 (include)"
+    directories:
+      source: "C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp"
+      binary: "C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/libpq/cmake"
+      VCPKG_APPLOCAL_DEPS: "ON"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "C:/src/vcpkg"
+    buildResult:
+      variable: "PQXX_HAVE_CHARCONV_INT"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_e1f29
+        [1/2] C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1438~1.331\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /EHsc  /Zi /Ob0 /Od /RTC1 -std:c++17 -MDd /showIncludes /FoCMakeFiles\\cmTC_e1f29.dir\\charconv_int.cxx.obj /FdCMakeFiles\\cmTC_e1f29.dir\\ /FS -c C:\\libpq\\config-tests\\charconv_int.cxx
+        [2/2] cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\\cmTC_e1f29.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100226~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100226~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1438~1.331\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_e1f29.dir\\charconv_int.cxx.obj  /out:cmTC_e1f29.exe /implib:cmTC_e1f29.lib /pdb:cmTC_e1f29.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cmd.exe /C "cd /D C:\\Work\\diplom\\out\\build\\x64-Debug\\pqxx\\CMakeFiles\\CMakeTmp && C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe -noprofile -executionpolicy Bypass -file C:/src/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp/cmTC_e1f29.exe -installedDir C:/src/vcpkg/installed/x64-windows/debug/bin -OutVariable out""
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/libpq/cmake/config.cmake:89 (try_compile)"
+      - "C:/libpq/CMakeLists.txt:27 (include)"
+    directories:
+      source: "C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp"
+      binary: "C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/libpq/cmake"
+      VCPKG_APPLOCAL_DEPS: "ON"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "C:/src/vcpkg"
+    buildResult:
+      variable: "PQXX_HAVE_PATH"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_12e41
+        [1/2] C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1438~1.331\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /EHsc  /Zi /Ob0 /Od /RTC1 -std:c++17 -MDd /showIncludes /FoCMakeFiles\\cmTC_12e41.dir\\fs.cxx.obj /FdCMakeFiles\\cmTC_12e41.dir\\ /FS -c C:\\libpq\\config-tests\\fs.cxx
+        [2/2] cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\\cmTC_12e41.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100226~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100226~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1438~1.331\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_12e41.dir\\fs.cxx.obj  /out:cmTC_12e41.exe /implib:cmTC_12e41.lib /pdb:cmTC_12e41.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cmd.exe /C "cd /D C:\\Work\\diplom\\out\\build\\x64-Debug\\pqxx\\CMakeFiles\\CMakeTmp && C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe -noprofile -executionpolicy Bypass -file C:/src/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp/cmTC_12e41.exe -installedDir C:/src/vcpkg/installed/x64-windows/debug/bin -OutVariable out""
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/libpq/cmake/config.cmake:93 (try_compile)"
+      - "C:/libpq/CMakeLists.txt:27 (include)"
+    directories:
+      source: "C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp"
+      binary: "C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/libpq/cmake"
+      VCPKG_APPLOCAL_DEPS: "ON"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "C:/src/vcpkg"
+    buildResult:
+      variable: "PQXX_HAVE_THREAD_LOCAL"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_b9fd7
+        [1/2] C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1438~1.331\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /EHsc  /Zi /Ob0 /Od /RTC1 -std:c++17 -MDd /showIncludes /FoCMakeFiles\\cmTC_b9fd7.dir\\thread_local.cxx.obj /FdCMakeFiles\\cmTC_b9fd7.dir\\ /FS -c C:\\libpq\\config-tests\\thread_local.cxx
+        [2/2] cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\\cmTC_b9fd7.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100226~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100226~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1438~1.331\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_b9fd7.dir\\thread_local.cxx.obj  /out:cmTC_b9fd7.exe /implib:cmTC_b9fd7.lib /pdb:cmTC_b9fd7.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cmd.exe /C "cd /D C:\\Work\\diplom\\out\\build\\x64-Debug\\pqxx\\CMakeFiles\\CMakeTmp && C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe -noprofile -executionpolicy Bypass -file C:/src/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp/cmTC_b9fd7.exe -installedDir C:/src/vcpkg/installed/x64-windows/debug/bin -OutVariable out""
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/libpq/cmake/config.cmake:97 (try_compile)"
+      - "C:/libpq/CMakeLists.txt:27 (include)"
+    directories:
+      source: "C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp"
+      binary: "C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/libpq/cmake"
+      VCPKG_APPLOCAL_DEPS: "ON"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "C:/src/vcpkg"
+    buildResult:
+      variable: "PQXX_HAVE_SLEEP_FOR"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_71ea7
+        [1/2] C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1438~1.331\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /EHsc  /Zi /Ob0 /Od /RTC1 -std:c++17 -MDd /showIncludes /FoCMakeFiles\\cmTC_71ea7.dir\\sleep_for.cxx.obj /FdCMakeFiles\\cmTC_71ea7.dir\\ /FS -c C:\\libpq\\config-tests\\sleep_for.cxx
+        [2/2] cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\\cmTC_71ea7.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100226~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100226~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1438~1.331\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_71ea7.dir\\sleep_for.cxx.obj  /out:cmTC_71ea7.exe /implib:cmTC_71ea7.lib /pdb:cmTC_71ea7.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cmd.exe /C "cd /D C:\\Work\\diplom\\out\\build\\x64-Debug\\pqxx\\CMakeFiles\\CMakeTmp && C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe -noprofile -executionpolicy Bypass -file C:/src/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp/cmTC_71ea7.exe -installedDir C:/src/vcpkg/installed/x64-windows/debug/bin -OutVariable out""
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/libpq/cmake/config.cmake:101 (try_compile)"
+      - "C:/libpq/CMakeLists.txt:27 (include)"
+    directories:
+      source: "C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp"
+      binary: "C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/libpq/cmake"
+      VCPKG_APPLOCAL_DEPS: "ON"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "C:/src/vcpkg"
+    buildResult:
+      variable: "PQXX_HAVE_STRERROR_R"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_c96b7
+        [1/2] C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1438~1.331\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /EHsc  /Zi /Ob0 /Od /RTC1 -std:c++17 -MDd /showIncludes /FoCMakeFiles\\cmTC_c96b7.dir\\strerror_r.cxx.obj /FdCMakeFiles\\cmTC_c96b7.dir\\ /FS -c C:\\libpq\\config-tests\\strerror_r.cxx
+        FAILED: CMakeFiles/cmTC_c96b7.dir/strerror_r.cxx.obj 
+        C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1438~1.331\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /EHsc  /Zi /Ob0 /Od /RTC1 -std:c++17 -MDd /showIncludes /FoCMakeFiles\\cmTC_c96b7.dir\\strerror_r.cxx.obj /FdCMakeFiles\\cmTC_c96b7.dir\\ /FS -c C:\\libpq\\config-tests\\strerror_r.cxx
+        C:\\libpq\\config-tests\\strerror_r.cxx(11): error C3861: strerror_r: идентификатор не найден
+        C:\\libpq\\config-tests\\strerror_r.cxx(13): error C2065: not: необъявленный идентификатор
+        C:\\libpq\\config-tests\\strerror_r.cxx(13): error C2146: синтаксическая ошибка: отсутствие ";" перед идентификатором "not"
+        C:\\libpq\\config-tests\\strerror_r.cxx(13): error C2065: not: необъявленный идентификатор
+        C:\\libpq\\config-tests\\strerror_r.cxx(13): error C2146: синтаксическая ошибка: отсутствие ";" перед идентификатором "res"
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/libpq/cmake/config.cmake:105 (try_compile)"
+      - "C:/libpq/CMakeLists.txt:27 (include)"
+    directories:
+      source: "C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp"
+      binary: "C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/libpq/cmake"
+      VCPKG_APPLOCAL_DEPS: "ON"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "C:/src/vcpkg"
+    buildResult:
+      variable: "PQXX_HAVE_STRERROR_S"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_1ea9f
+        [1/2] C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1438~1.331\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /EHsc  /Zi /Ob0 /Od /RTC1 -std:c++17 -MDd /showIncludes /FoCMakeFiles\\cmTC_1ea9f.dir\\strerror_s.cxx.obj /FdCMakeFiles\\cmTC_1ea9f.dir\\ /FS -c C:\\libpq\\config-tests\\strerror_s.cxx
+        [2/2] cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\\cmTC_1ea9f.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100226~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100226~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1438~1.331\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_1ea9f.dir\\strerror_s.cxx.obj  /out:cmTC_1ea9f.exe /implib:cmTC_1ea9f.lib /pdb:cmTC_1ea9f.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cmd.exe /C "cd /D C:\\Work\\diplom\\out\\build\\x64-Debug\\pqxx\\CMakeFiles\\CMakeTmp && C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe -noprofile -executionpolicy Bypass -file C:/src/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp/cmTC_1ea9f.exe -installedDir C:/src/vcpkg/installed/x64-windows/debug/bin -OutVariable out""
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/libpq/cmake/config.cmake:109 (try_compile)"
+      - "C:/libpq/CMakeLists.txt:27 (include)"
+    directories:
+      source: "C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp"
+      binary: "C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/libpq/cmake"
+      VCPKG_APPLOCAL_DEPS: "ON"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "C:/src/vcpkg"
+    buildResult:
+      variable: "PQXX_HAVE_YEAR_MONTH_DAY"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_6ce02
+        [1/2] C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1438~1.331\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /EHsc  /Zi /Ob0 /Od /RTC1 -std:c++17 -MDd /showIncludes /FoCMakeFiles\\cmTC_6ce02.dir\\year_month_day.cxx.obj /FdCMakeFiles\\cmTC_6ce02.dir\\ /FS -c C:\\libpq\\config-tests\\year_month_day.cxx
+        FAILED: CMakeFiles/cmTC_6ce02.dir/year_month_day.cxx.obj 
+        C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1438~1.331\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /EHsc  /Zi /Ob0 /Od /RTC1 -std:c++17 -MDd /showIncludes /FoCMakeFiles\\cmTC_6ce02.dir\\year_month_day.cxx.obj /FdCMakeFiles\\cmTC_6ce02.dir\\ /FS -c C:\\libpq\\config-tests\\year_month_day.cxx
+        C:\\libpq\\config-tests\\year_month_day.cxx(6): error C2039: "year": не является членом "std::chrono".
+        C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\include\\__msvc_chrono.hpp(806): note:  см. объявление "std::chrono"
+        C:\\libpq\\config-tests\\year_month_day.cxx(6): error C2065: year: необъявленный идентификатор
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/libpq/cmake/config.cmake:114 (try_compile)"
+      - "C:/libpq/CMakeLists.txt:27 (include)"
+    directories:
+      source: "C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp"
+      binary: "C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/libpq/cmake"
+      VCPKG_APPLOCAL_DEPS: "ON"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "C:/src/vcpkg"
+    buildResult:
+      variable: "PQXX_HAVE_CMP"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_6f57a
+        [1/2] C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1438~1.331\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /EHsc  /Zi /Ob0 /Od /RTC1 -std:c++17 -MDd /showIncludes /FoCMakeFiles\\cmTC_6f57a.dir\\cmp.cxx.obj /FdCMakeFiles\\cmTC_6f57a.dir\\ /FS -c C:\\libpq\\config-tests\\cmp.cxx
+        FAILED: CMakeFiles/cmTC_6f57a.dir/cmp.cxx.obj 
+        C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1438~1.331\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /EHsc  /Zi /Ob0 /Od /RTC1 -std:c++17 -MDd /showIncludes /FoCMakeFiles\\cmTC_6f57a.dir\\cmp.cxx.obj /FdCMakeFiles\\cmTC_6f57a.dir\\ /FS -c C:\\libpq\\config-tests\\cmp.cxx
+        C:\\libpq\\config-tests\\cmp.cxx(7): error C2039: "cmp_greater": не является членом "std".
+        C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\include\\utility(40): note:  см. объявление "std"
+        C:\\libpq\\config-tests\\cmp.cxx(7): error C3861: cmp_greater: идентификатор не найден
+        C:\\libpq\\config-tests\\cmp.cxx(7): error C2039: "cmp_less_equal": не является членом "std".
+        C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\include\\utility(40): note:  см. объявление "std"
+        C:\\libpq\\config-tests\\cmp.cxx(7): error C3861: cmp_less_equal: идентификатор не найден
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/libpq/cmake/config.cmake:119 (try_compile)"
+      - "C:/libpq/CMakeLists.txt:27 (include)"
+    directories:
+      source: "C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp"
+      binary: "C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/libpq/cmake"
+      VCPKG_APPLOCAL_DEPS: "ON"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "C:/src/vcpkg"
+    buildResult:
+      variable: "need_fslib"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_3bbe2
+        [1/2] C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1438~1.331\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /EHsc  /Zi /Ob0 /Od /RTC1 -std:c++17 -MDd /showIncludes /FoCMakeFiles\\cmTC_3bbe2.dir\\need_fslib.cxx.obj /FdCMakeFiles\\cmTC_3bbe2.dir\\ /FS -c C:\\libpq\\config-tests\\need_fslib.cxx
+        [2/2] cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\\cmTC_3bbe2.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100226~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100226~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1438~1.331\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_3bbe2.dir\\need_fslib.cxx.obj  /out:cmTC_3bbe2.exe /implib:cmTC_3bbe2.lib /pdb:cmTC_3bbe2.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cmd.exe /C "cd /D C:\\Work\\diplom\\out\\build\\x64-Debug\\pqxx\\CMakeFiles\\CMakeTmp && C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe -noprofile -executionpolicy Bypass -file C:/src/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp/cmTC_3bbe2.exe -installedDir C:/src/vcpkg/installed/x64-windows/debug/bin -OutVariable out""
+        
+      exitCode: 0
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/libpq/cmake/config.cmake:54 (try_compile)"
+      - "C:/libpq/CMakeLists.txt:27 (include)"
+    directories:
+      source: "C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp"
+      binary: "C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/libpq/cmake"
+      VCPKG_APPLOCAL_DEPS: "ON"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "C:/src/vcpkg"
+    buildResult:
+      variable: "PQXX_HAVE_GCC_PURE"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_2469f
+        [1/2] C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1438~1.331\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /EHsc  /Zi /Ob0 /Od /RTC1 -std:c++17 -MDd /showIncludes /FoCMakeFiles\\cmTC_2469f.dir\\gcc_pure.cxx.obj /FdCMakeFiles\\cmTC_2469f.dir\\ /FS -c C:\\libpq\\config-tests\\gcc_pure.cxx
+        FAILED: CMakeFiles/cmTC_2469f.dir/gcc_pure.cxx.obj 
+        C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1438~1.331\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /EHsc  /Zi /Ob0 /Od /RTC1 -std:c++17 -MDd /showIncludes /FoCMakeFiles\\cmTC_2469f.dir\\gcc_pure.cxx.obj /FdCMakeFiles\\cmTC_2469f.dir\\ /FS -c C:\\libpq\\config-tests\\gcc_pure.cxx
+        C:\\libpq\\config-tests\\gcc_pure.cxx(2): error C2065: pure: необъявленный идентификатор
+        C:\\libpq\\config-tests\\gcc_pure.cxx(2): error C2146: синтаксическая ошибка: отсутствие ";" перед идентификатором "f"
+        C:\\libpq\\config-tests\\gcc_pure.cxx(2): error C2059: синтаксическая ошибка: )
+        C:\\libpq\\config-tests\\gcc_pure.cxx(3): error C2143: синтаксическая ошибка: отсутствие ";" перед "{"
+        C:\\libpq\\config-tests\\gcc_pure.cxx(3): error C2447: {: отсутствует заголовок функции (возможно, используется формальный список старого типа)
+        C:\\libpq\\config-tests\\gcc_pure.cxx(9): error C3861: f: идентификатор не найден
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/libpq/cmake/config.cmake:58 (try_compile)"
+      - "C:/libpq/CMakeLists.txt:27 (include)"
+    directories:
+      source: "C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp"
+      binary: "C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/libpq/cmake"
+      VCPKG_APPLOCAL_DEPS: "ON"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "C:/src/vcpkg"
+    buildResult:
+      variable: "PQXX_HAVE_GCC_VISIBILITY"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_e5c63
+        [1/2] C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1438~1.331\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /EHsc  /Zi /Ob0 /Od /RTC1 -std:c++17 -MDd /showIncludes /FoCMakeFiles\\cmTC_e5c63.dir\\gcc_visibility.cxx.obj /FdCMakeFiles\\cmTC_e5c63.dir\\ /FS -c C:\\libpq\\config-tests\\gcc_visibility.cxx
+        FAILED: CMakeFiles/cmTC_e5c63.dir/gcc_visibility.cxx.obj 
+        C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1438~1.331\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /EHsc  /Zi /Ob0 /Od /RTC1 -std:c++17 -MDd /showIncludes /FoCMakeFiles\\cmTC_e5c63.dir\\gcc_visibility.cxx.obj /FdCMakeFiles\\cmTC_e5c63.dir\\ /FS -c C:\\libpq\\config-tests\\gcc_visibility.cxx
+        C:\\libpq\\config-tests\\gcc_visibility.cxx(2): error C2143: синтаксическая ошибка: отсутствие ")" перед "("
+        C:\\libpq\\config-tests\\gcc_visibility.cxx(2): error C2079: "visibility" использует не имеющую определения структуру struct "__attribute__"
+        C:\\libpq\\config-tests\\gcc_visibility.cxx(2): error C2440: инициализация: невозможно преобразовать "const char [7]" в "int"
+        C:\\libpq\\config-tests\\gcc_visibility.cxx(2): note: Не существует контекста, в котором такое преобразование возможно
+        C:\\libpq\\config-tests\\gcc_visibility.cxx(2): error C2059: синтаксическая ошибка: )
+        C:\\libpq\\config-tests\\gcc_visibility.cxx(2): error C2059: синтаксическая ошибка: )
+        C:\\libpq\\config-tests\\gcc_visibility.cxx(2): error C2146: синтаксическая ошибка: отсутствие ";" перед идентификатором "D"
+        C:\\libpq\\config-tests\\gcc_visibility.cxx(3): error C2447: {: отсутствует заголовок функции (возможно, используется формальный список старого типа)
+        C:\\libpq\\config-tests\\gcc_visibility.cxx(10): error C2065: D: необъявленный идентификатор
+        C:\\libpq\\config-tests\\gcc_visibility.cxx(10): error C2146: синтаксическая ошибка: отсутствие ";" перед идентификатором "d"
+        C:\\libpq\\config-tests\\gcc_visibility.cxx(10): error C2065: d: необъявленный идентификатор
+        C:\\libpq\\config-tests\\gcc_visibility.cxx(11): error C2065: d: необъявленный идентификатор
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/libpq/cmake/config.cmake:63 (try_compile)"
+      - "C:/libpq/CMakeLists.txt:27 (include)"
+    directories:
+      source: "C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp"
+      binary: "C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/libpq/cmake"
+      VCPKG_APPLOCAL_DEPS: "ON"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "C:/src/vcpkg"
+    buildResult:
+      variable: "PQXX_HAVE_LIKELY"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_462ab
+        [1/2] C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1438~1.331\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /EHsc  /Zi /Ob0 /Od /RTC1 -std:c++17 -MDd /showIncludes /FoCMakeFiles\\cmTC_462ab.dir\\likely.cxx.obj /FdCMakeFiles\\cmTC_462ab.dir\\ /FS -c C:\\libpq\\config-tests\\likely.cxx
+        FAILED: CMakeFiles/cmTC_462ab.dir/likely.cxx.obj 
+        C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1438~1.331\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /EHsc  /Zi /Ob0 /Od /RTC1 -std:c++17 -MDd /showIncludes /FoCMakeFiles\\cmTC_462ab.dir\\likely.cxx.obj /FdCMakeFiles\\cmTC_462ab.dir\\ /FS -c C:\\libpq\\config-tests\\likely.cxx
+        C:\\libpq\\config-tests\\likely.cxx(6): error C2065: because: необъявленный идентификатор
+        C:\\libpq\\config-tests\\likely.cxx(6): error C2065: older: необъявленный идентификатор
+        C:\\libpq\\config-tests\\likely.cxx(6): error C2065: C: необъявленный идентификатор
+        C:\\libpq\\config-tests\\likely.cxx(6): error C2065: standard: необъявленный идентификатор
+        C:\\libpq\\config-tests\\likely.cxx(6): error C3861: deliberately_fail: идентификатор не найден
+        C:\\libpq\\config-tests\\likely.cxx(10): warning C5051: для атрибута [[likely]] требуется не менее "/std:c++20", он игнорируется
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/libpq/cmake/config.cmake:67 (try_compile)"
+      - "C:/libpq/CMakeLists.txt:27 (include)"
+    directories:
+      source: "C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp"
+      binary: "C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/libpq/cmake"
+      VCPKG_APPLOCAL_DEPS: "ON"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "C:/src/vcpkg"
+    buildResult:
+      variable: "PQXX_HAVE_CXA_DEMANGLE"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_65358
+        [1/2] C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1438~1.331\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /EHsc  /Zi /Ob0 /Od /RTC1 -std:c++17 -MDd /showIncludes /FoCMakeFiles\\cmTC_65358.dir\\cxa_demangle.cxx.obj /FdCMakeFiles\\cmTC_65358.dir\\ /FS -c C:\\libpq\\config-tests\\cxa_demangle.cxx
+        FAILED: CMakeFiles/cmTC_65358.dir/cxa_demangle.cxx.obj 
+        C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1438~1.331\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /EHsc  /Zi /Ob0 /Od /RTC1 -std:c++17 -MDd /showIncludes /FoCMakeFiles\\cmTC_65358.dir\\cxa_demangle.cxx.obj /FdCMakeFiles\\cmTC_65358.dir\\ /FS -c C:\\libpq\\config-tests\\cxa_demangle.cxx
+        C:\\libpq\\config-tests\\cxa_demangle.cxx(7): fatal error C1083: Не удается открыть файл включение: cxxabi.h: No such file or directory,
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/libpq/cmake/config.cmake:72 (try_compile)"
+      - "C:/libpq/CMakeLists.txt:27 (include)"
+    directories:
+      source: "C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp"
+      binary: "C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/libpq/cmake"
+      VCPKG_APPLOCAL_DEPS: "ON"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "C:/src/vcpkg"
+    buildResult:
+      variable: "PQXX_HAVE_CONCEPTS"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_6bbca
+        [1/2] C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1438~1.331\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /EHsc  /Zi /Ob0 /Od /RTC1 -std:c++17 -MDd /showIncludes /FoCMakeFiles\\cmTC_6bbca.dir\\concepts.cxx.obj /FdCMakeFiles\\cmTC_6bbca.dir\\ /FS -c C:\\libpq\\config-tests\\concepts.cxx
+        FAILED: CMakeFiles/cmTC_6bbca.dir/concepts.cxx.obj 
+        C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1438~1.331\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /EHsc  /Zi /Ob0 /Od /RTC1 -std:c++17 -MDd /showIncludes /FoCMakeFiles\\cmTC_6bbca.dir\\concepts.cxx.obj /FdCMakeFiles\\cmTC_6bbca.dir\\ /FS -c C:\\libpq\\config-tests\\concepts.cxx
+        C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\include\\ranges(11): warning STL4038: The contents of <ranges> are available only with C++20 or later.
+        C:\\libpq\\config-tests\\concepts.cxx(8): error C2061: синтаксическая ошибка: идентификатор "Foo"
+        C:\\libpq\\config-tests\\concepts.cxx(8): error C3083: ranges: символ слева от "::" должен представлять тип
+        C:\\libpq\\config-tests\\concepts.cxx(8): error C2039: "input_range": не является членом "std".
+        C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\include\\vector(25): note:  см. объявление "std"
+        C:\\libpq\\config-tests\\concepts.cxx(11): error C2061: синтаксическая ошибка: идентификатор "Foo"
+        C:\\libpq\\config-tests\\concepts.cxx(11): error C2065: F: необъявленный идентификатор
+        C:\\libpq\\config-tests\\concepts.cxx(11): error C2988: неопознанное объявление или определение шаблона
+        C:\\libpq\\config-tests\\concepts.cxx(11): error C2059: синтаксическая ошибка: const
+        C:\\libpq\\config-tests\\concepts.cxx(12): error C2143: синтаксическая ошибка: отсутствие ";" перед "{"
+        C:\\libpq\\config-tests\\concepts.cxx(12): error C2447: {: отсутствует заголовок функции (возможно, используется формальный список старого типа)
+        C:\\libpq\\config-tests\\concepts.cxx(20): error C3861: foo: идентификатор не найден
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/libpq/cmake/config.cmake:77 (try_compile)"
+      - "C:/libpq/CMakeLists.txt:27 (include)"
+    directories:
+      source: "C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp"
+      binary: "C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/libpq/cmake"
+      VCPKG_APPLOCAL_DEPS: "ON"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "C:/src/vcpkg"
+    buildResult:
+      variable: "PQXX_HAVE_SPAN"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_60072
+        [1/2] C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1438~1.331\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /EHsc  /Zi /Ob0 /Od /RTC1 -std:c++17 -MDd /showIncludes /FoCMakeFiles\\cmTC_60072.dir\\span.cxx.obj /FdCMakeFiles\\cmTC_60072.dir\\ /FS -c C:\\libpq\\config-tests\\span.cxx
+        FAILED: CMakeFiles/cmTC_60072.dir/span.cxx.obj 
+        C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1438~1.331\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /EHsc  /Zi /Ob0 /Od /RTC1 -std:c++17 -MDd /showIncludes /FoCMakeFiles\\cmTC_60072.dir\\span.cxx.obj /FdCMakeFiles\\cmTC_60072.dir\\ /FS -c C:\\libpq\\config-tests\\span.cxx
+        C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\include\\span(12): warning STL4038: The contents of <span> are available only with C++20 or later.
+        C:\\libpq\\config-tests\\span.cxx(6): error C2039: "span": не является членом "std".
+        predefined C++ types (compiler internal)(348): note:  см. объявление "std"
+        C:\\libpq\\config-tests\\span.cxx(6): error C2065: span: необъявленный идентификатор
+        C:\\libpq\\config-tests\\span.cxx(6): error C2062: тип "char" не требуется
+        C:\\libpq\\config-tests\\span.cxx(6): error C2143: синтаксическая ошибка: отсутствие ";" перед "{"
+        C:\\libpq\\config-tests\\span.cxx(6): error C2039: "size_t": не является членом "std".
+        predefined C++ types (compiler internal)(348): note:  см. объявление "std"
+        C:\\libpq\\config-tests\\span.cxx(6): error C2143: синтаксическая ошибка: отсутствие ";" перед "}"
+        C:\\libpq\\config-tests\\span.cxx(7): error C2039: "size": не является членом "std".
+        predefined C++ types (compiler internal)(348): note:  см. объявление "std"
+        C:\\libpq\\config-tests\\span.cxx(7): error C2065: args: необъявленный идентификатор
+        C:\\libpq\\config-tests\\span.cxx(7): error C3861: size: идентификатор не найден
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/libpq/cmake/config.cmake:81 (try_compile)"
+      - "C:/libpq/CMakeLists.txt:27 (include)"
+    directories:
+      source: "C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp"
+      binary: "C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/libpq/cmake"
+      VCPKG_APPLOCAL_DEPS: "ON"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "C:/src/vcpkg"
+    buildResult:
+      variable: "PQXX_HAVE_CHARCONV_FLOAT"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_165f5
+        [1/2] C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1438~1.331\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /EHsc  /Zi /Ob0 /Od /RTC1 -std:c++17 -MDd /showIncludes /FoCMakeFiles\\cmTC_165f5.dir\\charconv_float.cxx.obj /FdCMakeFiles\\cmTC_165f5.dir\\ /FS -c C:\\libpq\\config-tests\\charconv_float.cxx
+        FAILED: CMakeFiles/cmTC_165f5.dir/charconv_float.cxx.obj 
+        C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1438~1.331\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /EHsc  /Zi /Ob0 /Od /RTC1 -std:c++17 -MDd /showIncludes /FoCMakeFiles\\cmTC_165f5.dir\\charconv_float.cxx.obj /FdCMakeFiles\\cmTC_165f5.dir\\ /FS -c C:\\libpq\\config-tests\\charconv_float.cxx
+        C:\\libpq\\config-tests\\charconv_float.cxx(15): error C2146: синтаксическая ошибка: отсутствие ")" перед идентификатором "and"
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/libpq/cmake/config.cmake:85 (try_compile)"
+      - "C:/libpq/CMakeLists.txt:27 (include)"
+    directories:
+      source: "C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp"
+      binary: "C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/libpq/cmake"
+      VCPKG_APPLOCAL_DEPS: "ON"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "C:/src/vcpkg"
+    buildResult:
+      variable: "PQXX_HAVE_CHARCONV_INT"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_294c7
+        [1/2] C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1438~1.331\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /EHsc  /Zi /Ob0 /Od /RTC1 -std:c++17 -MDd /showIncludes /FoCMakeFiles\\cmTC_294c7.dir\\charconv_int.cxx.obj /FdCMakeFiles\\cmTC_294c7.dir\\ /FS -c C:\\libpq\\config-tests\\charconv_int.cxx
+        [2/2] cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\\cmTC_294c7.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100226~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100226~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1438~1.331\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_294c7.dir\\charconv_int.cxx.obj  /out:cmTC_294c7.exe /implib:cmTC_294c7.lib /pdb:cmTC_294c7.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cmd.exe /C "cd /D C:\\Work\\diplom\\out\\build\\x64-Debug\\pqxx\\CMakeFiles\\CMakeTmp && C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe -noprofile -executionpolicy Bypass -file C:/src/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp/cmTC_294c7.exe -installedDir C:/src/vcpkg/installed/x64-windows/debug/bin -OutVariable out""
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/libpq/cmake/config.cmake:89 (try_compile)"
+      - "C:/libpq/CMakeLists.txt:27 (include)"
+    directories:
+      source: "C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp"
+      binary: "C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/libpq/cmake"
+      VCPKG_APPLOCAL_DEPS: "ON"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "C:/src/vcpkg"
+    buildResult:
+      variable: "PQXX_HAVE_PATH"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_df1d6
+        [1/2] C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1438~1.331\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /EHsc  /Zi /Ob0 /Od /RTC1 -std:c++17 -MDd /showIncludes /FoCMakeFiles\\cmTC_df1d6.dir\\fs.cxx.obj /FdCMakeFiles\\cmTC_df1d6.dir\\ /FS -c C:\\libpq\\config-tests\\fs.cxx
+        [2/2] cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\\cmTC_df1d6.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100226~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100226~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1438~1.331\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_df1d6.dir\\fs.cxx.obj  /out:cmTC_df1d6.exe /implib:cmTC_df1d6.lib /pdb:cmTC_df1d6.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cmd.exe /C "cd /D C:\\Work\\diplom\\out\\build\\x64-Debug\\pqxx\\CMakeFiles\\CMakeTmp && C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe -noprofile -executionpolicy Bypass -file C:/src/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp/cmTC_df1d6.exe -installedDir C:/src/vcpkg/installed/x64-windows/debug/bin -OutVariable out""
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/libpq/cmake/config.cmake:93 (try_compile)"
+      - "C:/libpq/CMakeLists.txt:27 (include)"
+    directories:
+      source: "C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp"
+      binary: "C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/libpq/cmake"
+      VCPKG_APPLOCAL_DEPS: "ON"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "C:/src/vcpkg"
+    buildResult:
+      variable: "PQXX_HAVE_THREAD_LOCAL"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_7bbae
+        [1/2] C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1438~1.331\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /EHsc  /Zi /Ob0 /Od /RTC1 -std:c++17 -MDd /showIncludes /FoCMakeFiles\\cmTC_7bbae.dir\\thread_local.cxx.obj /FdCMakeFiles\\cmTC_7bbae.dir\\ /FS -c C:\\libpq\\config-tests\\thread_local.cxx
+        [2/2] cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\\cmTC_7bbae.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100226~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100226~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1438~1.331\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_7bbae.dir\\thread_local.cxx.obj  /out:cmTC_7bbae.exe /implib:cmTC_7bbae.lib /pdb:cmTC_7bbae.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cmd.exe /C "cd /D C:\\Work\\diplom\\out\\build\\x64-Debug\\pqxx\\CMakeFiles\\CMakeTmp && C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe -noprofile -executionpolicy Bypass -file C:/src/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp/cmTC_7bbae.exe -installedDir C:/src/vcpkg/installed/x64-windows/debug/bin -OutVariable out""
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/libpq/cmake/config.cmake:97 (try_compile)"
+      - "C:/libpq/CMakeLists.txt:27 (include)"
+    directories:
+      source: "C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp"
+      binary: "C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/libpq/cmake"
+      VCPKG_APPLOCAL_DEPS: "ON"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "C:/src/vcpkg"
+    buildResult:
+      variable: "PQXX_HAVE_SLEEP_FOR"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_7a3ba
+        [1/2] C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1438~1.331\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /EHsc  /Zi /Ob0 /Od /RTC1 -std:c++17 -MDd /showIncludes /FoCMakeFiles\\cmTC_7a3ba.dir\\sleep_for.cxx.obj /FdCMakeFiles\\cmTC_7a3ba.dir\\ /FS -c C:\\libpq\\config-tests\\sleep_for.cxx
+        [2/2] cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\\cmTC_7a3ba.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100226~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100226~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1438~1.331\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_7a3ba.dir\\sleep_for.cxx.obj  /out:cmTC_7a3ba.exe /implib:cmTC_7a3ba.lib /pdb:cmTC_7a3ba.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cmd.exe /C "cd /D C:\\Work\\diplom\\out\\build\\x64-Debug\\pqxx\\CMakeFiles\\CMakeTmp && C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe -noprofile -executionpolicy Bypass -file C:/src/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp/cmTC_7a3ba.exe -installedDir C:/src/vcpkg/installed/x64-windows/debug/bin -OutVariable out""
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/libpq/cmake/config.cmake:101 (try_compile)"
+      - "C:/libpq/CMakeLists.txt:27 (include)"
+    directories:
+      source: "C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp"
+      binary: "C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/libpq/cmake"
+      VCPKG_APPLOCAL_DEPS: "ON"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "C:/src/vcpkg"
+    buildResult:
+      variable: "PQXX_HAVE_STRERROR_R"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_52665
+        [1/2] C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1438~1.331\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /EHsc  /Zi /Ob0 /Od /RTC1 -std:c++17 -MDd /showIncludes /FoCMakeFiles\\cmTC_52665.dir\\strerror_r.cxx.obj /FdCMakeFiles\\cmTC_52665.dir\\ /FS -c C:\\libpq\\config-tests\\strerror_r.cxx
+        FAILED: CMakeFiles/cmTC_52665.dir/strerror_r.cxx.obj 
+        C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1438~1.331\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /EHsc  /Zi /Ob0 /Od /RTC1 -std:c++17 -MDd /showIncludes /FoCMakeFiles\\cmTC_52665.dir\\strerror_r.cxx.obj /FdCMakeFiles\\cmTC_52665.dir\\ /FS -c C:\\libpq\\config-tests\\strerror_r.cxx
+        C:\\libpq\\config-tests\\strerror_r.cxx(11): error C3861: strerror_r: идентификатор не найден
+        C:\\libpq\\config-tests\\strerror_r.cxx(13): error C2065: not: необъявленный идентификатор
+        C:\\libpq\\config-tests\\strerror_r.cxx(13): error C2146: синтаксическая ошибка: отсутствие ";" перед идентификатором "not"
+        C:\\libpq\\config-tests\\strerror_r.cxx(13): error C2065: not: необъявленный идентификатор
+        C:\\libpq\\config-tests\\strerror_r.cxx(13): error C2146: синтаксическая ошибка: отсутствие ";" перед идентификатором "res"
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/libpq/cmake/config.cmake:105 (try_compile)"
+      - "C:/libpq/CMakeLists.txt:27 (include)"
+    directories:
+      source: "C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp"
+      binary: "C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/libpq/cmake"
+      VCPKG_APPLOCAL_DEPS: "ON"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "C:/src/vcpkg"
+    buildResult:
+      variable: "PQXX_HAVE_STRERROR_S"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_33be5
+        [1/2] C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1438~1.331\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /EHsc  /Zi /Ob0 /Od /RTC1 -std:c++17 -MDd /showIncludes /FoCMakeFiles\\cmTC_33be5.dir\\strerror_s.cxx.obj /FdCMakeFiles\\cmTC_33be5.dir\\ /FS -c C:\\libpq\\config-tests\\strerror_s.cxx
+        [2/2] cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\\cmTC_33be5.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100226~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100226~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1438~1.331\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_33be5.dir\\strerror_s.cxx.obj  /out:cmTC_33be5.exe /implib:cmTC_33be5.lib /pdb:cmTC_33be5.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cmd.exe /C "cd /D C:\\Work\\diplom\\out\\build\\x64-Debug\\pqxx\\CMakeFiles\\CMakeTmp && C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe -noprofile -executionpolicy Bypass -file C:/src/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp/cmTC_33be5.exe -installedDir C:/src/vcpkg/installed/x64-windows/debug/bin -OutVariable out""
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/libpq/cmake/config.cmake:109 (try_compile)"
+      - "C:/libpq/CMakeLists.txt:27 (include)"
+    directories:
+      source: "C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp"
+      binary: "C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/libpq/cmake"
+      VCPKG_APPLOCAL_DEPS: "ON"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "C:/src/vcpkg"
+    buildResult:
+      variable: "PQXX_HAVE_YEAR_MONTH_DAY"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_ffe86
+        [1/2] C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1438~1.331\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /EHsc  /Zi /Ob0 /Od /RTC1 -std:c++17 -MDd /showIncludes /FoCMakeFiles\\cmTC_ffe86.dir\\year_month_day.cxx.obj /FdCMakeFiles\\cmTC_ffe86.dir\\ /FS -c C:\\libpq\\config-tests\\year_month_day.cxx
+        FAILED: CMakeFiles/cmTC_ffe86.dir/year_month_day.cxx.obj 
+        C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1438~1.331\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /EHsc  /Zi /Ob0 /Od /RTC1 -std:c++17 -MDd /showIncludes /FoCMakeFiles\\cmTC_ffe86.dir\\year_month_day.cxx.obj /FdCMakeFiles\\cmTC_ffe86.dir\\ /FS -c C:\\libpq\\config-tests\\year_month_day.cxx
+        C:\\libpq\\config-tests\\year_month_day.cxx(6): error C2039: "year": не является членом "std::chrono".
+        C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\include\\__msvc_chrono.hpp(806): note:  см. объявление "std::chrono"
+        C:\\libpq\\config-tests\\year_month_day.cxx(6): error C2065: year: необъявленный идентификатор
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/libpq/cmake/config.cmake:114 (try_compile)"
+      - "C:/libpq/CMakeLists.txt:27 (include)"
+    directories:
+      source: "C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp"
+      binary: "C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/libpq/cmake"
+      VCPKG_APPLOCAL_DEPS: "ON"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "C:/src/vcpkg"
+    buildResult:
+      variable: "PQXX_HAVE_CMP"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_2d830
+        [1/2] C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1438~1.331\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /EHsc  /Zi /Ob0 /Od /RTC1 -std:c++17 -MDd /showIncludes /FoCMakeFiles\\cmTC_2d830.dir\\cmp.cxx.obj /FdCMakeFiles\\cmTC_2d830.dir\\ /FS -c C:\\libpq\\config-tests\\cmp.cxx
+        FAILED: CMakeFiles/cmTC_2d830.dir/cmp.cxx.obj 
+        C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1438~1.331\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /EHsc  /Zi /Ob0 /Od /RTC1 -std:c++17 -MDd /showIncludes /FoCMakeFiles\\cmTC_2d830.dir\\cmp.cxx.obj /FdCMakeFiles\\cmTC_2d830.dir\\ /FS -c C:\\libpq\\config-tests\\cmp.cxx
+        C:\\libpq\\config-tests\\cmp.cxx(7): error C2039: "cmp_greater": не является членом "std".
+        C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\include\\utility(40): note:  см. объявление "std"
+        C:\\libpq\\config-tests\\cmp.cxx(7): error C3861: cmp_greater: идентификатор не найден
+        C:\\libpq\\config-tests\\cmp.cxx(7): error C2039: "cmp_less_equal": не является членом "std".
+        C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\include\\utility(40): note:  см. объявление "std"
+        C:\\libpq\\config-tests\\cmp.cxx(7): error C3861: cmp_less_equal: идентификатор не найден
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/libpq/cmake/config.cmake:119 (try_compile)"
+      - "C:/libpq/CMakeLists.txt:27 (include)"
+    directories:
+      source: "C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp"
+      binary: "C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/libpq/cmake"
+      VCPKG_APPLOCAL_DEPS: "ON"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "C:/src/vcpkg"
+    buildResult:
+      variable: "need_fslib"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_60f83
+        [1/2] C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1438~1.331\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /EHsc  /Zi /Ob0 /Od /RTC1 -std:c++17 -MDd /showIncludes /FoCMakeFiles\\cmTC_60f83.dir\\need_fslib.cxx.obj /FdCMakeFiles\\cmTC_60f83.dir\\ /FS -c C:\\libpq\\config-tests\\need_fslib.cxx
+        [2/2] cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\\cmTC_60f83.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100226~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100226~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1438~1.331\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_60f83.dir\\need_fslib.cxx.obj  /out:cmTC_60f83.exe /implib:cmTC_60f83.lib /pdb:cmTC_60f83.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cmd.exe /C "cd /D C:\\Work\\diplom\\out\\build\\x64-Debug\\pqxx\\CMakeFiles\\CMakeTmp && C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe -noprofile -executionpolicy Bypass -file C:/src/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp/cmTC_60f83.exe -installedDir C:/src/vcpkg/installed/x64-windows/debug/bin -OutVariable out""
+        
+      exitCode: 0
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/libpq/cmake/config.cmake:54 (try_compile)"
+      - "C:/libpq/CMakeLists.txt:27 (include)"
+    directories:
+      source: "C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp"
+      binary: "C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/libpq/cmake"
+      VCPKG_APPLOCAL_DEPS: "ON"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "C:/src/vcpkg"
+    buildResult:
+      variable: "PQXX_HAVE_GCC_PURE"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_b4c79
+        [1/2] C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1438~1.331\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /EHsc  /Zi /Ob0 /Od /RTC1 -std:c++17 -MDd /showIncludes /FoCMakeFiles\\cmTC_b4c79.dir\\gcc_pure.cxx.obj /FdCMakeFiles\\cmTC_b4c79.dir\\ /FS -c C:\\libpq\\config-tests\\gcc_pure.cxx
+        FAILED: CMakeFiles/cmTC_b4c79.dir/gcc_pure.cxx.obj 
+        C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1438~1.331\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /EHsc  /Zi /Ob0 /Od /RTC1 -std:c++17 -MDd /showIncludes /FoCMakeFiles\\cmTC_b4c79.dir\\gcc_pure.cxx.obj /FdCMakeFiles\\cmTC_b4c79.dir\\ /FS -c C:\\libpq\\config-tests\\gcc_pure.cxx
+        C:\\libpq\\config-tests\\gcc_pure.cxx(2): error C2065: pure: необъявленный идентификатор
+        C:\\libpq\\config-tests\\gcc_pure.cxx(2): error C2146: синтаксическая ошибка: отсутствие ";" перед идентификатором "f"
+        C:\\libpq\\config-tests\\gcc_pure.cxx(2): error C2059: синтаксическая ошибка: )
+        C:\\libpq\\config-tests\\gcc_pure.cxx(3): error C2143: синтаксическая ошибка: отсутствие ";" перед "{"
+        C:\\libpq\\config-tests\\gcc_pure.cxx(3): error C2447: {: отсутствует заголовок функции (возможно, используется формальный список старого типа)
+        C:\\libpq\\config-tests\\gcc_pure.cxx(9): error C3861: f: идентификатор не найден
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/libpq/cmake/config.cmake:58 (try_compile)"
+      - "C:/libpq/CMakeLists.txt:27 (include)"
+    directories:
+      source: "C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp"
+      binary: "C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/libpq/cmake"
+      VCPKG_APPLOCAL_DEPS: "ON"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "C:/src/vcpkg"
+    buildResult:
+      variable: "PQXX_HAVE_GCC_VISIBILITY"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_5ba75
+        [1/2] C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1438~1.331\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /EHsc  /Zi /Ob0 /Od /RTC1 -std:c++17 -MDd /showIncludes /FoCMakeFiles\\cmTC_5ba75.dir\\gcc_visibility.cxx.obj /FdCMakeFiles\\cmTC_5ba75.dir\\ /FS -c C:\\libpq\\config-tests\\gcc_visibility.cxx
+        FAILED: CMakeFiles/cmTC_5ba75.dir/gcc_visibility.cxx.obj 
+        C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1438~1.331\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /EHsc  /Zi /Ob0 /Od /RTC1 -std:c++17 -MDd /showIncludes /FoCMakeFiles\\cmTC_5ba75.dir\\gcc_visibility.cxx.obj /FdCMakeFiles\\cmTC_5ba75.dir\\ /FS -c C:\\libpq\\config-tests\\gcc_visibility.cxx
+        C:\\libpq\\config-tests\\gcc_visibility.cxx(2): error C2143: синтаксическая ошибка: отсутствие ")" перед "("
+        C:\\libpq\\config-tests\\gcc_visibility.cxx(2): error C2079: "visibility" использует не имеющую определения структуру struct "__attribute__"
+        C:\\libpq\\config-tests\\gcc_visibility.cxx(2): error C2440: инициализация: невозможно преобразовать "const char [7]" в "int"
+        C:\\libpq\\config-tests\\gcc_visibility.cxx(2): note: Не существует контекста, в котором такое преобразование возможно
+        C:\\libpq\\config-tests\\gcc_visibility.cxx(2): error C2059: синтаксическая ошибка: )
+        C:\\libpq\\config-tests\\gcc_visibility.cxx(2): error C2059: синтаксическая ошибка: )
+        C:\\libpq\\config-tests\\gcc_visibility.cxx(2): error C2146: синтаксическая ошибка: отсутствие ";" перед идентификатором "D"
+        C:\\libpq\\config-tests\\gcc_visibility.cxx(3): error C2447: {: отсутствует заголовок функции (возможно, используется формальный список старого типа)
+        C:\\libpq\\config-tests\\gcc_visibility.cxx(10): error C2065: D: необъявленный идентификатор
+        C:\\libpq\\config-tests\\gcc_visibility.cxx(10): error C2146: синтаксическая ошибка: отсутствие ";" перед идентификатором "d"
+        C:\\libpq\\config-tests\\gcc_visibility.cxx(10): error C2065: d: необъявленный идентификатор
+        C:\\libpq\\config-tests\\gcc_visibility.cxx(11): error C2065: d: необъявленный идентификатор
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/libpq/cmake/config.cmake:63 (try_compile)"
+      - "C:/libpq/CMakeLists.txt:27 (include)"
+    directories:
+      source: "C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp"
+      binary: "C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/libpq/cmake"
+      VCPKG_APPLOCAL_DEPS: "ON"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "C:/src/vcpkg"
+    buildResult:
+      variable: "PQXX_HAVE_LIKELY"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_49d64
+        [1/2] C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1438~1.331\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /EHsc  /Zi /Ob0 /Od /RTC1 -std:c++17 -MDd /showIncludes /FoCMakeFiles\\cmTC_49d64.dir\\likely.cxx.obj /FdCMakeFiles\\cmTC_49d64.dir\\ /FS -c C:\\libpq\\config-tests\\likely.cxx
+        FAILED: CMakeFiles/cmTC_49d64.dir/likely.cxx.obj 
+        C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1438~1.331\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /EHsc  /Zi /Ob0 /Od /RTC1 -std:c++17 -MDd /showIncludes /FoCMakeFiles\\cmTC_49d64.dir\\likely.cxx.obj /FdCMakeFiles\\cmTC_49d64.dir\\ /FS -c C:\\libpq\\config-tests\\likely.cxx
+        C:\\libpq\\config-tests\\likely.cxx(6): error C2065: because: необъявленный идентификатор
+        C:\\libpq\\config-tests\\likely.cxx(6): error C2065: older: необъявленный идентификатор
+        C:\\libpq\\config-tests\\likely.cxx(6): error C2065: C: необъявленный идентификатор
+        C:\\libpq\\config-tests\\likely.cxx(6): error C2065: standard: необъявленный идентификатор
+        C:\\libpq\\config-tests\\likely.cxx(6): error C3861: deliberately_fail: идентификатор не найден
+        C:\\libpq\\config-tests\\likely.cxx(10): warning C5051: для атрибута [[likely]] требуется не менее "/std:c++20", он игнорируется
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/libpq/cmake/config.cmake:67 (try_compile)"
+      - "C:/libpq/CMakeLists.txt:27 (include)"
+    directories:
+      source: "C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp"
+      binary: "C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/libpq/cmake"
+      VCPKG_APPLOCAL_DEPS: "ON"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "C:/src/vcpkg"
+    buildResult:
+      variable: "PQXX_HAVE_CXA_DEMANGLE"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_92d64
+        [1/2] C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1438~1.331\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /EHsc  /Zi /Ob0 /Od /RTC1 -std:c++17 -MDd /showIncludes /FoCMakeFiles\\cmTC_92d64.dir\\cxa_demangle.cxx.obj /FdCMakeFiles\\cmTC_92d64.dir\\ /FS -c C:\\libpq\\config-tests\\cxa_demangle.cxx
+        FAILED: CMakeFiles/cmTC_92d64.dir/cxa_demangle.cxx.obj 
+        C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1438~1.331\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /EHsc  /Zi /Ob0 /Od /RTC1 -std:c++17 -MDd /showIncludes /FoCMakeFiles\\cmTC_92d64.dir\\cxa_demangle.cxx.obj /FdCMakeFiles\\cmTC_92d64.dir\\ /FS -c C:\\libpq\\config-tests\\cxa_demangle.cxx
+        C:\\libpq\\config-tests\\cxa_demangle.cxx(7): fatal error C1083: Не удается открыть файл включение: cxxabi.h: No such file or directory,
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/libpq/cmake/config.cmake:72 (try_compile)"
+      - "C:/libpq/CMakeLists.txt:27 (include)"
+    directories:
+      source: "C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp"
+      binary: "C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/libpq/cmake"
+      VCPKG_APPLOCAL_DEPS: "ON"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "C:/src/vcpkg"
+    buildResult:
+      variable: "PQXX_HAVE_CONCEPTS"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_dbbd5
+        [1/2] C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1438~1.331\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /EHsc  /Zi /Ob0 /Od /RTC1 -std:c++17 -MDd /showIncludes /FoCMakeFiles\\cmTC_dbbd5.dir\\concepts.cxx.obj /FdCMakeFiles\\cmTC_dbbd5.dir\\ /FS -c C:\\libpq\\config-tests\\concepts.cxx
+        FAILED: CMakeFiles/cmTC_dbbd5.dir/concepts.cxx.obj 
+        C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1438~1.331\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /EHsc  /Zi /Ob0 /Od /RTC1 -std:c++17 -MDd /showIncludes /FoCMakeFiles\\cmTC_dbbd5.dir\\concepts.cxx.obj /FdCMakeFiles\\cmTC_dbbd5.dir\\ /FS -c C:\\libpq\\config-tests\\concepts.cxx
+        C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\include\\ranges(11): warning STL4038: The contents of <ranges> are available only with C++20 or later.
+        C:\\libpq\\config-tests\\concepts.cxx(8): error C2061: синтаксическая ошибка: идентификатор "Foo"
+        C:\\libpq\\config-tests\\concepts.cxx(8): error C3083: ranges: символ слева от "::" должен представлять тип
+        C:\\libpq\\config-tests\\concepts.cxx(8): error C2039: "input_range": не является членом "std".
+        C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\include\\vector(25): note:  см. объявление "std"
+        C:\\libpq\\config-tests\\concepts.cxx(11): error C2061: синтаксическая ошибка: идентификатор "Foo"
+        C:\\libpq\\config-tests\\concepts.cxx(11): error C2065: F: необъявленный идентификатор
+        C:\\libpq\\config-tests\\concepts.cxx(11): error C2988: неопознанное объявление или определение шаблона
+        C:\\libpq\\config-tests\\concepts.cxx(11): error C2059: синтаксическая ошибка: const
+        C:\\libpq\\config-tests\\concepts.cxx(12): error C2143: синтаксическая ошибка: отсутствие ";" перед "{"
+        C:\\libpq\\config-tests\\concepts.cxx(12): error C2447: {: отсутствует заголовок функции (возможно, используется формальный список старого типа)
+        C:\\libpq\\config-tests\\concepts.cxx(20): error C3861: foo: идентификатор не найден
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/libpq/cmake/config.cmake:77 (try_compile)"
+      - "C:/libpq/CMakeLists.txt:27 (include)"
+    directories:
+      source: "C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp"
+      binary: "C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/libpq/cmake"
+      VCPKG_APPLOCAL_DEPS: "ON"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "C:/src/vcpkg"
+    buildResult:
+      variable: "PQXX_HAVE_SPAN"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_c2632
+        [1/2] C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1438~1.331\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /EHsc  /Zi /Ob0 /Od /RTC1 -std:c++17 -MDd /showIncludes /FoCMakeFiles\\cmTC_c2632.dir\\span.cxx.obj /FdCMakeFiles\\cmTC_c2632.dir\\ /FS -c C:\\libpq\\config-tests\\span.cxx
+        FAILED: CMakeFiles/cmTC_c2632.dir/span.cxx.obj 
+        C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1438~1.331\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /EHsc  /Zi /Ob0 /Od /RTC1 -std:c++17 -MDd /showIncludes /FoCMakeFiles\\cmTC_c2632.dir\\span.cxx.obj /FdCMakeFiles\\cmTC_c2632.dir\\ /FS -c C:\\libpq\\config-tests\\span.cxx
+        C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\include\\span(12): warning STL4038: The contents of <span> are available only with C++20 or later.
+        C:\\libpq\\config-tests\\span.cxx(6): error C2039: "span": не является членом "std".
+        predefined C++ types (compiler internal)(348): note:  см. объявление "std"
+        C:\\libpq\\config-tests\\span.cxx(6): error C2065: span: необъявленный идентификатор
+        C:\\libpq\\config-tests\\span.cxx(6): error C2062: тип "char" не требуется
+        C:\\libpq\\config-tests\\span.cxx(6): error C2143: синтаксическая ошибка: отсутствие ";" перед "{"
+        C:\\libpq\\config-tests\\span.cxx(6): error C2039: "size_t": не является членом "std".
+        predefined C++ types (compiler internal)(348): note:  см. объявление "std"
+        C:\\libpq\\config-tests\\span.cxx(6): error C2143: синтаксическая ошибка: отсутствие ";" перед "}"
+        C:\\libpq\\config-tests\\span.cxx(7): error C2039: "size": не является членом "std".
+        predefined C++ types (compiler internal)(348): note:  см. объявление "std"
+        C:\\libpq\\config-tests\\span.cxx(7): error C2065: args: необъявленный идентификатор
+        C:\\libpq\\config-tests\\span.cxx(7): error C3861: size: идентификатор не найден
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/libpq/cmake/config.cmake:81 (try_compile)"
+      - "C:/libpq/CMakeLists.txt:27 (include)"
+    directories:
+      source: "C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp"
+      binary: "C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/libpq/cmake"
+      VCPKG_APPLOCAL_DEPS: "ON"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "C:/src/vcpkg"
+    buildResult:
+      variable: "PQXX_HAVE_CHARCONV_FLOAT"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_1db2c
+        [1/2] C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1438~1.331\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /EHsc  /Zi /Ob0 /Od /RTC1 -std:c++17 -MDd /showIncludes /FoCMakeFiles\\cmTC_1db2c.dir\\charconv_float.cxx.obj /FdCMakeFiles\\cmTC_1db2c.dir\\ /FS -c C:\\libpq\\config-tests\\charconv_float.cxx
+        FAILED: CMakeFiles/cmTC_1db2c.dir/charconv_float.cxx.obj 
+        C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1438~1.331\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /EHsc  /Zi /Ob0 /Od /RTC1 -std:c++17 -MDd /showIncludes /FoCMakeFiles\\cmTC_1db2c.dir\\charconv_float.cxx.obj /FdCMakeFiles\\cmTC_1db2c.dir\\ /FS -c C:\\libpq\\config-tests\\charconv_float.cxx
+        C:\\libpq\\config-tests\\charconv_float.cxx(15): error C2146: синтаксическая ошибка: отсутствие ")" перед идентификатором "and"
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/libpq/cmake/config.cmake:85 (try_compile)"
+      - "C:/libpq/CMakeLists.txt:27 (include)"
+    directories:
+      source: "C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp"
+      binary: "C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/libpq/cmake"
+      VCPKG_APPLOCAL_DEPS: "ON"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "C:/src/vcpkg"
+    buildResult:
+      variable: "PQXX_HAVE_CHARCONV_INT"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_2467a
+        [1/2] C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1438~1.331\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /EHsc  /Zi /Ob0 /Od /RTC1 -std:c++17 -MDd /showIncludes /FoCMakeFiles\\cmTC_2467a.dir\\charconv_int.cxx.obj /FdCMakeFiles\\cmTC_2467a.dir\\ /FS -c C:\\libpq\\config-tests\\charconv_int.cxx
+        [2/2] cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\\cmTC_2467a.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100226~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100226~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1438~1.331\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_2467a.dir\\charconv_int.cxx.obj  /out:cmTC_2467a.exe /implib:cmTC_2467a.lib /pdb:cmTC_2467a.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cmd.exe /C "cd /D C:\\Work\\diplom\\out\\build\\x64-Debug\\pqxx\\CMakeFiles\\CMakeTmp && C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe -noprofile -executionpolicy Bypass -file C:/src/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp/cmTC_2467a.exe -installedDir C:/src/vcpkg/installed/x64-windows/debug/bin -OutVariable out""
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/libpq/cmake/config.cmake:89 (try_compile)"
+      - "C:/libpq/CMakeLists.txt:27 (include)"
+    directories:
+      source: "C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp"
+      binary: "C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/libpq/cmake"
+      VCPKG_APPLOCAL_DEPS: "ON"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "C:/src/vcpkg"
+    buildResult:
+      variable: "PQXX_HAVE_PATH"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_b4410
+        [1/2] C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1438~1.331\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /EHsc  /Zi /Ob0 /Od /RTC1 -std:c++17 -MDd /showIncludes /FoCMakeFiles\\cmTC_b4410.dir\\fs.cxx.obj /FdCMakeFiles\\cmTC_b4410.dir\\ /FS -c C:\\libpq\\config-tests\\fs.cxx
+        [2/2] cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\\cmTC_b4410.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100226~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100226~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1438~1.331\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_b4410.dir\\fs.cxx.obj  /out:cmTC_b4410.exe /implib:cmTC_b4410.lib /pdb:cmTC_b4410.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cmd.exe /C "cd /D C:\\Work\\diplom\\out\\build\\x64-Debug\\pqxx\\CMakeFiles\\CMakeTmp && C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe -noprofile -executionpolicy Bypass -file C:/src/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp/cmTC_b4410.exe -installedDir C:/src/vcpkg/installed/x64-windows/debug/bin -OutVariable out""
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/libpq/cmake/config.cmake:93 (try_compile)"
+      - "C:/libpq/CMakeLists.txt:27 (include)"
+    directories:
+      source: "C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp"
+      binary: "C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/libpq/cmake"
+      VCPKG_APPLOCAL_DEPS: "ON"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "C:/src/vcpkg"
+    buildResult:
+      variable: "PQXX_HAVE_THREAD_LOCAL"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_ef925
+        [1/2] C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1438~1.331\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /EHsc  /Zi /Ob0 /Od /RTC1 -std:c++17 -MDd /showIncludes /FoCMakeFiles\\cmTC_ef925.dir\\thread_local.cxx.obj /FdCMakeFiles\\cmTC_ef925.dir\\ /FS -c C:\\libpq\\config-tests\\thread_local.cxx
+        [2/2] cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\\cmTC_ef925.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100226~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100226~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1438~1.331\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_ef925.dir\\thread_local.cxx.obj  /out:cmTC_ef925.exe /implib:cmTC_ef925.lib /pdb:cmTC_ef925.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cmd.exe /C "cd /D C:\\Work\\diplom\\out\\build\\x64-Debug\\pqxx\\CMakeFiles\\CMakeTmp && C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe -noprofile -executionpolicy Bypass -file C:/src/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp/cmTC_ef925.exe -installedDir C:/src/vcpkg/installed/x64-windows/debug/bin -OutVariable out""
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/libpq/cmake/config.cmake:97 (try_compile)"
+      - "C:/libpq/CMakeLists.txt:27 (include)"
+    directories:
+      source: "C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp"
+      binary: "C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/libpq/cmake"
+      VCPKG_APPLOCAL_DEPS: "ON"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "C:/src/vcpkg"
+    buildResult:
+      variable: "PQXX_HAVE_SLEEP_FOR"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_134cd
+        [1/2] C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1438~1.331\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /EHsc  /Zi /Ob0 /Od /RTC1 -std:c++17 -MDd /showIncludes /FoCMakeFiles\\cmTC_134cd.dir\\sleep_for.cxx.obj /FdCMakeFiles\\cmTC_134cd.dir\\ /FS -c C:\\libpq\\config-tests\\sleep_for.cxx
+        [2/2] cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\\cmTC_134cd.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100226~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100226~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1438~1.331\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_134cd.dir\\sleep_for.cxx.obj  /out:cmTC_134cd.exe /implib:cmTC_134cd.lib /pdb:cmTC_134cd.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cmd.exe /C "cd /D C:\\Work\\diplom\\out\\build\\x64-Debug\\pqxx\\CMakeFiles\\CMakeTmp && C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe -noprofile -executionpolicy Bypass -file C:/src/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp/cmTC_134cd.exe -installedDir C:/src/vcpkg/installed/x64-windows/debug/bin -OutVariable out""
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/libpq/cmake/config.cmake:101 (try_compile)"
+      - "C:/libpq/CMakeLists.txt:27 (include)"
+    directories:
+      source: "C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp"
+      binary: "C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/libpq/cmake"
+      VCPKG_APPLOCAL_DEPS: "ON"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "C:/src/vcpkg"
+    buildResult:
+      variable: "PQXX_HAVE_STRERROR_R"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_cc342
+        [1/2] C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1438~1.331\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /EHsc  /Zi /Ob0 /Od /RTC1 -std:c++17 -MDd /showIncludes /FoCMakeFiles\\cmTC_cc342.dir\\strerror_r.cxx.obj /FdCMakeFiles\\cmTC_cc342.dir\\ /FS -c C:\\libpq\\config-tests\\strerror_r.cxx
+        FAILED: CMakeFiles/cmTC_cc342.dir/strerror_r.cxx.obj 
+        C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1438~1.331\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /EHsc  /Zi /Ob0 /Od /RTC1 -std:c++17 -MDd /showIncludes /FoCMakeFiles\\cmTC_cc342.dir\\strerror_r.cxx.obj /FdCMakeFiles\\cmTC_cc342.dir\\ /FS -c C:\\libpq\\config-tests\\strerror_r.cxx
+        C:\\libpq\\config-tests\\strerror_r.cxx(11): error C3861: strerror_r: идентификатор не найден
+        C:\\libpq\\config-tests\\strerror_r.cxx(13): error C2065: not: необъявленный идентификатор
+        C:\\libpq\\config-tests\\strerror_r.cxx(13): error C2146: синтаксическая ошибка: отсутствие ";" перед идентификатором "not"
+        C:\\libpq\\config-tests\\strerror_r.cxx(13): error C2065: not: необъявленный идентификатор
+        C:\\libpq\\config-tests\\strerror_r.cxx(13): error C2146: синтаксическая ошибка: отсутствие ";" перед идентификатором "res"
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/libpq/cmake/config.cmake:105 (try_compile)"
+      - "C:/libpq/CMakeLists.txt:27 (include)"
+    directories:
+      source: "C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp"
+      binary: "C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/libpq/cmake"
+      VCPKG_APPLOCAL_DEPS: "ON"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "C:/src/vcpkg"
+    buildResult:
+      variable: "PQXX_HAVE_STRERROR_S"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_77d58
+        [1/2] C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1438~1.331\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /EHsc  /Zi /Ob0 /Od /RTC1 -std:c++17 -MDd /showIncludes /FoCMakeFiles\\cmTC_77d58.dir\\strerror_s.cxx.obj /FdCMakeFiles\\cmTC_77d58.dir\\ /FS -c C:\\libpq\\config-tests\\strerror_s.cxx
+        [2/2] cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\\cmTC_77d58.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100226~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100226~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1438~1.331\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_77d58.dir\\strerror_s.cxx.obj  /out:cmTC_77d58.exe /implib:cmTC_77d58.lib /pdb:cmTC_77d58.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cmd.exe /C "cd /D C:\\Work\\diplom\\out\\build\\x64-Debug\\pqxx\\CMakeFiles\\CMakeTmp && C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe -noprofile -executionpolicy Bypass -file C:/src/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp/cmTC_77d58.exe -installedDir C:/src/vcpkg/installed/x64-windows/debug/bin -OutVariable out""
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/libpq/cmake/config.cmake:109 (try_compile)"
+      - "C:/libpq/CMakeLists.txt:27 (include)"
+    directories:
+      source: "C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp"
+      binary: "C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/libpq/cmake"
+      VCPKG_APPLOCAL_DEPS: "ON"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "C:/src/vcpkg"
+    buildResult:
+      variable: "PQXX_HAVE_YEAR_MONTH_DAY"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_831d5
+        [1/2] C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1438~1.331\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /EHsc  /Zi /Ob0 /Od /RTC1 -std:c++17 -MDd /showIncludes /FoCMakeFiles\\cmTC_831d5.dir\\year_month_day.cxx.obj /FdCMakeFiles\\cmTC_831d5.dir\\ /FS -c C:\\libpq\\config-tests\\year_month_day.cxx
+        FAILED: CMakeFiles/cmTC_831d5.dir/year_month_day.cxx.obj 
+        C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1438~1.331\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /EHsc  /Zi /Ob0 /Od /RTC1 -std:c++17 -MDd /showIncludes /FoCMakeFiles\\cmTC_831d5.dir\\year_month_day.cxx.obj /FdCMakeFiles\\cmTC_831d5.dir\\ /FS -c C:\\libpq\\config-tests\\year_month_day.cxx
+        C:\\libpq\\config-tests\\year_month_day.cxx(6): error C2039: "year": не является членом "std::chrono".
+        C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\include\\__msvc_chrono.hpp(806): note:  см. объявление "std::chrono"
+        C:\\libpq\\config-tests\\year_month_day.cxx(6): error C2065: year: необъявленный идентификатор
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/libpq/cmake/config.cmake:114 (try_compile)"
+      - "C:/libpq/CMakeLists.txt:27 (include)"
+    directories:
+      source: "C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp"
+      binary: "C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/libpq/cmake"
+      VCPKG_APPLOCAL_DEPS: "ON"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "C:/src/vcpkg"
+    buildResult:
+      variable: "PQXX_HAVE_CMP"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_50432
+        [1/2] C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1438~1.331\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /EHsc  /Zi /Ob0 /Od /RTC1 -std:c++17 -MDd /showIncludes /FoCMakeFiles\\cmTC_50432.dir\\cmp.cxx.obj /FdCMakeFiles\\cmTC_50432.dir\\ /FS -c C:\\libpq\\config-tests\\cmp.cxx
+        FAILED: CMakeFiles/cmTC_50432.dir/cmp.cxx.obj 
+        C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1438~1.331\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /EHsc  /Zi /Ob0 /Od /RTC1 -std:c++17 -MDd /showIncludes /FoCMakeFiles\\cmTC_50432.dir\\cmp.cxx.obj /FdCMakeFiles\\cmTC_50432.dir\\ /FS -c C:\\libpq\\config-tests\\cmp.cxx
+        C:\\libpq\\config-tests\\cmp.cxx(7): error C2039: "cmp_greater": не является членом "std".
+        C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\include\\utility(40): note:  см. объявление "std"
+        C:\\libpq\\config-tests\\cmp.cxx(7): error C3861: cmp_greater: идентификатор не найден
+        C:\\libpq\\config-tests\\cmp.cxx(7): error C2039: "cmp_less_equal": не является членом "std".
+        C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\include\\utility(40): note:  см. объявление "std"
+        C:\\libpq\\config-tests\\cmp.cxx(7): error C3861: cmp_less_equal: идентификатор не найден
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/libpq/cmake/config.cmake:119 (try_compile)"
+      - "C:/libpq/CMakeLists.txt:27 (include)"
+    directories:
+      source: "C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp"
+      binary: "C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/libpq/cmake"
+      VCPKG_APPLOCAL_DEPS: "ON"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "C:/src/vcpkg"
+    buildResult:
+      variable: "need_fslib"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_3607c
+        [1/2] C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1438~1.331\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /EHsc  /Zi /Ob0 /Od /RTC1 -std:c++17 -MDd /showIncludes /FoCMakeFiles\\cmTC_3607c.dir\\need_fslib.cxx.obj /FdCMakeFiles\\cmTC_3607c.dir\\ /FS -c C:\\libpq\\config-tests\\need_fslib.cxx
+        [2/2] cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\\cmTC_3607c.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100226~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100226~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1438~1.331\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_3607c.dir\\need_fslib.cxx.obj  /out:cmTC_3607c.exe /implib:cmTC_3607c.lib /pdb:cmTC_3607c.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cmd.exe /C "cd /D C:\\Work\\diplom\\out\\build\\x64-Debug\\pqxx\\CMakeFiles\\CMakeTmp && C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe -noprofile -executionpolicy Bypass -file C:/src/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary C:/Work/diplom/out/build/x64-Debug/pqxx/CMakeFiles/CMakeTmp/cmTC_3607c.exe -installedDir C:/src/vcpkg/installed/x64-windows/debug/bin -OutVariable out""
+        
+      exitCode: 0
+...

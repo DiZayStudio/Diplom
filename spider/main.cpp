@@ -3,6 +3,8 @@
 #include <vector>
 #include <string>
 //#include <boost/locale.hpp>
+#include <boost/algorithm/string.hpp>
+
 #include <regex>
 #include <thread>
 #include <mutex>
@@ -32,20 +34,21 @@ bool exitThreadPool = false;
 DataBase db;
 
 std::map<std::string, int> getWorldsAndIndex(const std::string text) {
-	std::regex word_regex("(\\w+)"); //"[^\\s]+"
+	std::regex word_regex("[\\w{3,30}]+"); //([.-]?\w{3,32})+    "[^\\s]+"
 	auto words_begin =
 		std::sregex_iterator(text.begin(), text.end(), word_regex);
 	auto words_end = std::sregex_iterator();
-
+	int n = std::distance(words_begin, words_end);
 	std::vector<std::string> words;
 
 	for (std::sregex_iterator i = words_begin; i != words_end; ++i) {
 		std::smatch match = *i;
-		words.push_back(match.str());
+		if (match.str().size() > 2) {
+			words.push_back(match.str());
+		}
 	}
 
 	// Индексация слов
-
 	std::map<std::string, int> indexWords;
 
 	for (int i = 0; i < words.size(); ++i) {
@@ -93,66 +96,57 @@ void threadPoolWorker() {
 }
 
 std::string RemoveHTMLTags(const std::string s) {
-
 	// Удаление HEAD
 	std::string  str = s;
 	int index = s.find("<body");
 	str.replace(0,index,"");
 
-	// Удаление знаков препинания
-	//std::regex simbol_replace("/[^\w\s\']|_/g");
-	//str = regex_replace(str, simbol_replace, " ");
-
-	system("cls");
-	std::cout << str << std::endl;
-
-	// Удаление переноса строк и табуляции
-	//for (int i = 0; i < str.size(); ++i) {
-	//	if (str[i] == '\n' || str[i] == '\t') {
-	//		str[i] = ' ';
-	//	}
-	//}
-	std::regex re("\n|\t");
-	str = regex_replace(str, re, "");
-
 	// Удаление скриптов
-//	std::regex script_replace("<script[^>]*>[\s\S]*?</\1>");
-//	std::string str = regex_replace(str, script_replace, "");
+//	std::regex script("<script[\s\S]*?>[\s\S]*?<\/script>"); // <script[^>]*>[\s\S]*?</\1>
+//	str = regex_replace(str, script, " ");
+
 	int indexStart;
 	int indexStop;
 	do {
 		indexStart = str.find("<script");
-		indexStop = str.find("/script") + 7;
+		indexStop = str.find("</script");
 		if (indexStart != -1) {
 			str.replace(indexStart, indexStop, " ");
 		}
 	} while (indexStart != -1);
 
-	// Удаление комментариев
-//	std::regex comm_replace("<!--.*?-->", std::regex_constants::basic);
-//	std::string outStr = regex_replace(outStr, comm_replace, "");
-
+//	std::regex pattern_style("<style[^>]*?>[\s\S]*?<\/style>");  
+//	str = regex_replace(str, pattern_style, " ");
+	
 	do {
-		indexStart = str.find("<!--");
-		indexStop = str.find("-->") + 3;
+		indexStart = str.find("<style");
+		indexStop = str.find("</style");// ;
 		if (indexStart != -1) {
 			str.replace(indexStart, indexStop, " ");
 		}
 	} while (indexStart != -1);
+
+	system("cls");
+	std::cout << str << std::endl;
 
 	// Удаление HTML тегов
-	std::regex pattern("<[^>]*>");
+	std::regex pattern("\<(/?[^\>]+)\>"); //<[^>]*>  
 	str = regex_replace(str, pattern, " ");
-	//system("cls");
-	//std::cout << str << std::endl;
 
-	// Удаление слов длиннее 32 символа
-	std::regex long_word_regex("(\\w{32,})");
-	str = std::regex_replace(str, long_word_regex, " ");
+	std::regex re("(\n|\t|[0-9])");
+	str = regex_replace(str, re, "");
 
-//	std::regex short_word_regex("(\\w{1,3})");
-//	str = std::regex_replace(str, short_word_regex, " ");
+	std::regex point(",");
+	str = regex_replace(str, point, " ");
+
+//	std::regex simbol_replace("/[^\w\s\']|_/g");
+//	str = regex_replace(str, simbol_replace, " ");
+
+	boost::algorithm::to_lower(str);
+
+	system("cls");
 	std::cout << str << std::endl;
+
 	return str;
 }
 
@@ -170,28 +164,9 @@ void parseLink(const Link& link, int depth )
 			return;
 		}
 
-		// TODO: Parse HTML code here on your own
-	//	std::cout << "html content:" << std::endl;
-	//	std::cout << html << std::endl;
-
-		// system("cls");
+		// TODO: Parse HTML code 
 		// Очистка от HTML тегов, знаков препинания и табуляции
 		std::string text = RemoveHTMLTags(html);
-
-		// Перевод в нижний регистр
-		
-		//using namespace boost::locale;
-		//generator gen;
-		//std::locale loc = gen("");
-		// Create system default locale
-		//std::locale::global(loc);
-		// Make it system global
-		//std::cout.imbue(loc);
-		// Set as default locale for output
-		//std::cout << "This is lower case " << to_lower("Hello World!") << std::endl;
-
-	//	for (int i = 0; i < (text).size(); i++)
-	//		tolower(text[i]);
 
 		// Анализ частоты вхождения слов	
 		std::map<std::string, int> words = getWorldsAndIndex(text);
