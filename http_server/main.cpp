@@ -7,6 +7,11 @@
 #include <string>
 #include <iostream>
 
+#include "iniParser.h"
+#include "struct.h"
+
+#include <pqxx/pqxx>
+
 #include "http_connection.h"
 #include <Windows.h>
 
@@ -28,11 +33,31 @@ int main(int argc, char* argv[])
 	SetConsoleCP(CP_UTF8);
 	SetConsoleOutputCP(CP_UTF8);
 
+	setvbuf(stdout, nullptr, _IOFBF, 1000);
+
+	Configure conf;
+	// Загружаем настройки 
+	IniParser iniParser;
+	// загрузка IP и Port из ini файла
+	iniParser.parse("config.ini", conf);
+
+	std::string CONST_CONNECTION = "host=" + conf.dbHost + " port=" + conf.dbPort + " dbname=" + conf.dbName +
+		" user=" + conf.dbUser + " password=" + conf.dbPass;
+
+	try {
+
+		std::unique_ptr<pqxx::connection> c = std::make_unique<pqxx::connection>(CONST_CONNECTION);
+		db.SetConnection(std::move(c));
+
+	}
+	catch (const std::exception& e) {
+		std::cerr << e.what() << std::endl;
+	}
+
 	try
 	{
-
-		auto const address = net::ip::make_address("0.0.0.0");
-		unsigned short port = 8080;
+		auto const address = net::ip::make_address(conf.host);
+		unsigned short port = conf.port;
 
 		net::io_context ioc{1};
 

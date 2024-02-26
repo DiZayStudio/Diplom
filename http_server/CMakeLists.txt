@@ -5,6 +5,11 @@ add_executable(HttpServerApp
 	main.cpp
 	http_connection.h
 	http_connection.cpp
+	iniParser.h
+	struct.h
+	link.h
+	db.h 
+	db.cpp
 	)
 
 target_compile_features(HttpServerApp PRIVATE cxx_std_17) 

@@ -13,10 +13,8 @@ public:
         boost::property_tree::ptree pt;
         boost::property_tree::ini_parser::read_ini(filename, pt);
 
-        conf.protocol = pt.get<std::string>("spider.protocol", "https://");
-        conf.host = pt.get<std::string>("spider.host", "en.wikipedia.org");
-        conf.startPage = pt.get<std::string>("spider.startPage", "/wiki/Main_Page");
-        conf.depth = pt.get<int>("spider.depth", 0);
+        conf.host = pt.get<std::string>("server.host", "0.0.0.0");
+        conf.port = pt.get<int>("server.port", 8080);
 
         conf.dbHost = pt.get<std::string>("db.host", "pg3.sweb.ru");
         conf.dbPort = pt.get<std::string>("db.port", "5432");

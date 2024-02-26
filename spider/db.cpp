@@ -15,8 +15,9 @@ void DataBase::CreateTable() {
 	//tx.exec("DROP table Documents");
 	//tx.exec("DROP table Words");
 	//tx.exec("DROP table DocumentsWords");
+	//tx.commit();
 
-	tx.exec("CREATE TABLE IF NOT EXISTS Documents (id SERIAL PRIMARY KEY, protocol integer NOT NULL, "
+	tx.exec("CREATE TABLE IF NOT EXISTS Documents (id SERIAL PRIMARY KEY, protocol VARCHAR(32) NOT NULL, "
 			"hostName VARCHAR(250) NOT NULL, query VARCHAR(250) NOT NULL); ");
 	tx.exec("CREATE TABLE IF NOT EXISTS Words (id SERIAL PRIMARY KEY, word VARCHAR(32) UNIQUE NOT NULL); ");
 	tx.exec("CREATE TABLE IF NOT EXISTS DocumentsWords (docLink_id integer NOT NULL, word_id integer NOT NULL, count integer NOT NULL); ");
@@ -29,22 +30,36 @@ void DataBase::InsertData(const std::map<std::string, int>& words, const Link& l
 	std::string query;
 
 	// сохраняем ссылку
-	query = "INSERT INTO Documents VALUES ( nextval('words_id_seq'::regclass), "
-		"'" + std::to_string(int(link.protocol)) + "', '" + link.hostName + "', '" + link.query + "')";
-	tx.exec(query);
+	query = "INSERT INTO Documents VALUES ( nextval('documents_id_seq'::regclass), "
+		"'" + (link.protocol) + "', '" + link.hostName + "', '" + link.query + "') RETURNING id";
+	
+	int id_dokument = tx.query_value<int>(query);
 
-	//int id_document = tx.query_value<std::int>("SELECT id FROM Documents WHERE id = 3");
-	 
-	for (const auto element : words) {
-		query = "INSERT INTO words VALUES ( nextval('words_id_seq'::regclass), '" + element.first + "')";
-		tx.exec(query);
+	// проверка наличия данных в даблице
+	int count = 0;
+
+
+	int id_word = 0;
+	for (const auto element : words) {		
+		query = "SELECT count(id) FROM words WHERE word='" + element.first + "'";
+		count = tx.query_value<int>(query);
+		
+		// если таблица не пустая, поиск слова 	
+		if (count != 0) {
+			//query = "SELECT Count(*), coalesce(max(id), 0) AS id FROM words WHERE word='" + element.first + "'";
+			query = "SELECT id FROM words WHERE word='" + element.first + "'";
+			id_word = tx.query_value<int>(query);
+		} else {
+			query = "INSERT INTO Words VALUES ( nextval('words_id_seq'::regclass), '" + element.first + "') RETURNING id";
+			id_word = tx.query_value<int>(query);
+		}
+
+		query = "INSERT INTO documentswords(doclink_id, word_id, count) "
+				"VALUES ('" + std::to_string(id_dokument)+"', '"+std::to_string(id_word)+"', '"+std::to_string(element.second)+ "') ";
 		// загрузить индекс слова
-	//	query = "INSERT INTO DocumentsWords VALUES ( nextval('words_id_seq'::regclass), '" + element.first + "')";
 		tx.exec(query);
-		tx.commit();
 	}
-	
-	
+	tx.commit();
 };
 
 void DataBase::ClearTable(const std::string tableName) {

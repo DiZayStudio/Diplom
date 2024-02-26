@@ -2,9 +2,15 @@
 #include <string>
 #include <unordered_set>
 
+enum class ProtocolType
+{
+	HTTP = 0,
+	HTTPS = 1
+};
+
 struct Link
 {
-	std::string protocol;
+	ProtocolType protocol;
 	std::string hostName;
 	std::string query;
 

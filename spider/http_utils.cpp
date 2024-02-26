@@ -38,7 +38,6 @@ bool isText(const boost::beast::multi_buffer::const_buffers_type& b)
 
 std::string getHtmlContent(const Link& link)
 {
-
 	std::string result;
 
 	try
@@ -48,9 +47,8 @@ std::string getHtmlContent(const Link& link)
 
 		net::io_context ioc;
 
-		if (link.protocol == ProtocolType::HTTPS)
+		if (link.protocol == "https://")
 		{
-
 			ssl::context ctx(ssl::context::tlsv13_client);
 			ctx.set_default_verify_paths();
 
@@ -61,7 +59,6 @@ std::string getHtmlContent(const Link& link)
 				return true; // Accept any certificate
 				});
 
-
 			if (!SSL_set_tlsext_host_name(stream.native_handle(), host.c_str())) {
 				beast::error_code ec{static_cast<int>(::ERR_get_error()), net::error::get_ssl_category()};
 				throw beast::system_error{ec};
@@ -70,7 +67,6 @@ std::string getHtmlContent(const Link& link)
 			ip::tcp::resolver resolver(ioc);
 			get_lowest_layer(stream).connect(resolver.resolve({ host, "https" }));
 			get_lowest_layer(stream).expires_after(std::chrono::seconds(30));
-
 
 			http::request<http::empty_body> req{http::verb::get, query, 11};
 			req.set(http::field::host, host);
@@ -139,7 +135,6 @@ std::string getHtmlContent(const Link& link)
 
 			if (ec && ec != beast::errc::not_connected)
 				throw beast::system_error{ec};
-
 		}
 	}
 	catch (const std::exception& e)

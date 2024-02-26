@@ -1688,6 +1688,15 @@ build http_server\CMakeFiles\HttpServerApp.dir\http_connection.cpp.obj: CXX_COMP
   TARGET_COMPILE_PDB = http_server\CMakeFiles\HttpServerApp.dir\
   TARGET_PDB = http_server\HttpServerApp.pdb
 
+build http_server\CMakeFiles\HttpServerApp.dir\db.cpp.obj: CXX_COMPILER__HttpServerApp_unscanned_Debug C$:\Work\diplom\http_server\db.cpp || cmake_object_order_depends_target_HttpServerApp
+  DEFINES = -D_WIN32_WINNT=0x0A01
+  FLAGS = /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -std:c++17 -MDd
+  INCLUDES = -IC:\local\boost_1_84_0 -IC:\Work\diplom\out\build\x64-Debug\pqxx\include -IC:\libpq\include -external:I"C:\Program Files\OpenSSL-Win64\include" -external:W0
+  OBJECT_DIR = http_server\CMakeFiles\HttpServerApp.dir
+  OBJECT_FILE_DIR = http_server\CMakeFiles\HttpServerApp.dir
+  TARGET_COMPILE_PDB = http_server\CMakeFiles\HttpServerApp.dir\
+  TARGET_PDB = http_server\HttpServerApp.pdb
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target HttpServerApp
@@ -1696,7 +1705,7 @@ build http_server\CMakeFiles\HttpServerApp.dir\http_connection.cpp.obj: CXX_COMP
 #############################################
 # Link the executable http_server\HttpServerApp.exe
 
-build http_server\HttpServerApp.exe: CXX_EXECUTABLE_LINKER__HttpServerApp_Debug http_server\CMakeFiles\HttpServerApp.dir\main.cpp.obj http_server\CMakeFiles\HttpServerApp.dir\http_connection.cpp.obj | pqxx\src\pqxx.lib C$:\src\vcpkg\installed\x64-windows\debug\lib\libssl.lib C$:\Program$ Files\PostgreSQL\15\lib\libpq.lib C$:\src\vcpkg\installed\x64-windows\debug\lib\libcrypto.lib || pqxx\src\pqxx.lib
+build http_server\HttpServerApp.exe: CXX_EXECUTABLE_LINKER__HttpServerApp_Debug http_server\CMakeFiles\HttpServerApp.dir\main.cpp.obj http_server\CMakeFiles\HttpServerApp.dir\http_connection.cpp.obj http_server\CMakeFiles\HttpServerApp.dir\db.cpp.obj | pqxx\src\pqxx.lib C$:\src\vcpkg\installed\x64-windows\debug\lib\libssl.lib C$:\Program$ Files\PostgreSQL\15\lib\libpq.lib C$:\src\vcpkg\installed\x64-windows\debug\lib\libcrypto.lib || pqxx\src\pqxx.lib
   FLAGS = /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -MDd
   LINK_FLAGS = /machine:x64 /debug /INCREMENTAL /subsystem:console
   LINK_LIBRARIES = pqxx\src\pqxx.lib  C:\src\vcpkg\installed\x64-windows\debug\lib\libssl.lib  "C:\Program Files\PostgreSQL\15\lib\libpq.lib"  wsock32.lib  ws2_32.lib  C:\src\vcpkg\installed\x64-windows\debug\lib\libcrypto.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib

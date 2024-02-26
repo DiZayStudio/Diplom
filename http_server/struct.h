@@ -3,10 +3,9 @@
 #include <iostream>
 
 struct Configure {
-	std::string protocol;
 	std::string host;
-	std::string startPage;
-	int depth;
+	int port;
+
 	std::string dbHost;
 	std::string dbPort;
 	std::string dbName;

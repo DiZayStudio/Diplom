@@ -5,13 +5,16 @@
 #include <locale>
 #include <codecvt>
 #include <iostream>
+#include <pqxx/pqxx>
+#include <regex>
+#include "db.h"
 
 namespace beast = boost::beast;
 namespace http = beast::http;
 namespace net = boost::asio;
 using tcp = boost::asio::ip::tcp;
 
-
+DataBase db;
 
 std::string url_decode(const std::string& encoded) {
 	std::string res;
@@ -146,6 +149,7 @@ void HttpConnection::createResponsePost()
 		std::string key = s.substr(0, pos);
 		std::string value = s.substr(pos + 1);
 
+		// искомая фраза
 		std::string utf8value = convert_to_utf8(value);
 
 		if (key != "search")
@@ -156,12 +160,67 @@ void HttpConnection::createResponsePost()
 			return;
 		}
 
-		// TODO: Fetch your own search results here
+		// выделение отдельных слов из запроса
+		std::regex word_regex("[\\w{3,30}]+"); //([.-]?\w{3,32})+   
+		auto words_begin =
+			std::sregex_iterator(utf8value.begin(), utf8value.end(), word_regex);
+		auto words_end = std::sregex_iterator();
+		
+		int nWord = std::distance(words_begin, words_end);
+		
 
-		std::vector<std::string> searchResult = {
-			"https://en.wikipedia.org/wiki/Main_Page",
-			"https://en.wikipedia.org/wiki/Wikipedia",
-		};
+		if (nWord > 0) {
+			std::vector<std::string> words;
+
+			for (std::sregex_iterator i = words_begin; i != words_end; ++i) {
+				std::smatch match = *i;
+				if (match.str().size() > 2) {
+					words.push_back(match.str());
+				}
+			}
+			
+			// поиск в БД слов, сохранение индексов 
+			std::vector<int> wordId;
+			for (int i = 0; i < words.size(); ++i) {
+				wordId.push_back(db.GetIdWord(words[i]));
+			}
+			
+			// определение частоты упоминания
+			std::map<int, int> reng;
+			for (int i = 0; i < nWord; ++i){
+				auto documents = db.GetWordCount(wordId[i]);
+				for (auto doc:documents) {
+					reng[doc.first] = doc.second;
+				}	
+			}
+			
+
+			// TODO: Fetch your own search results here
+			std::vector<std::string> searchResult;
+			// выборка из базы ссылок и сохранение в вектор 
+			for (const auto& elem : reng) {
+				Link l = db.GetLink(elem.first);
+				std::string str = "";
+				if (l.protocol == ProtocolType::HTTP) {
+					str = "http//:";
+				}
+				else {
+					str = "https//:";
+				}
+				str = str + l.hostName + l.query;
+				searchResult.push_back(str);
+			}
+
+
+
+//= {
+//				"https://en.wikipedia.org/wiki/Main_Page",
+//				"https://en.wikipedia.org/wiki/Wikipedia",
+			};
+		}
+		else {
+			// нет слов для поиска
+		}
 
 
 		response_.set(http::field::content_type, "text/html");
