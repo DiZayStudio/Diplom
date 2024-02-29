@@ -9,6 +9,7 @@ add_executable(SpiderApp
 	struct.h
 	db.h 
 	db.cpp
+	config.ini
 )
 
 target_compile_features(SpiderApp PRIVATE cxx_std_17) 
