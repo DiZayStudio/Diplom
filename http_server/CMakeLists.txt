@@ -1,6 +1,5 @@
 cmake_minimum_required(VERSION 3.20)
 
-
 add_executable(HttpServerApp 
 	main.cpp
 	http_connection.h
@@ -10,6 +9,7 @@ add_executable(HttpServerApp
 	link.h
 	db.h 
 	db.cpp
+	config.ini
 	)
 
 target_compile_features(HttpServerApp PRIVATE cxx_std_17) 

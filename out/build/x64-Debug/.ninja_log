@@ -5,8 +5,8 @@
 169	3234	7281558223386881	libpqxx-build/src/CMakeFiles/pqxx.dir/encodings.cxx.obj	39543477565b7cc1
 59	2672	7281558217403099	libpqxx-build/src/CMakeFiles/pqxx.dir/array.cxx.obj	f53f685d5ca8b78f
 30443	33370	7300672976949578	pqxx/test/CMakeFiles/runner.dir/test87.cxx.obj	f22c830ab9f703e3
-30078	32863	7300672971748402	pqxx/test/CMakeFiles/runner.dir/test79.cxx.obj	bf322d81ae16b96d
 79	2994	7281558220859701	libpqxx-build/src/CMakeFiles/pqxx.dir/binarystring.cxx.obj	e6fc16842b511705
+30078	32863	7300672971748402	pqxx/test/CMakeFiles/runner.dir/test79.cxx.obj	bf322d81ae16b96d
 19924	22502	7281558416275606	libpqxx-build/test/CMakeFiles/runner.dir/test29.cxx.obj	e5fe9189fa7ea8e
 147	3060	7281558221492694	libpqxx-build/src/CMakeFiles/pqxx.dir/cursor.cxx.obj	ce4792a2fc2f80b1
 11576	14274	7281558333699307	libpqxx-build/src/CMakeFiles/pqxx.dir/wait.cxx.obj	12059edf631a243c
@@ -18,7 +18,7 @@
 124	5491	7281558245871778	libpqxx-build/src/CMakeFiles/pqxx.dir/connection.cxx.obj	33861a2612cd428d
 2672	5507	7281558246344871	libpqxx-build/src/CMakeFiles/pqxx.dir/errorhandler.cxx.obj	261329c023a329b3
 38448	41655	7300673059781627	pqxx/test/CMakeFiles/runner.dir/unit/test_error_verbosity.cxx.obj	af27e6e185d4739f
-9790	13997	7299494427804997	http_server/HttpServerApp.exe	401840db8df690ad
+15883	21551	7309301183529022	http_server/HttpServerApp.exe	401840db8df690ad
 3239	6776	7281558257969029	libpqxx-build/src/CMakeFiles/pqxx.dir/largeobject.cxx.obj	dddfb0bccc181b2c
 20084	22650	7281558417538689	libpqxx-build/test/CMakeFiles/runner.dir/test32.cxx.obj	4dac346238e7b100
 4643	7560	7281558266621362	libpqxx-build/src/CMakeFiles/pqxx.dir/notification.cxx.obj	48de1f3e508e0d1
@@ -29,7 +29,7 @@
 57980	60535	7300673248706707	pqxx/test/CMakeFiles/runner.dir/unit/test_type_name.cxx.obj	523d397e36586900
 20274	23510	7281558425865056	libpqxx-build/test/CMakeFiles/runner.dir/test37.cxx.obj	3c8a0f7244255dec
 5507	7875	7281558269742202	libpqxx-build/src/CMakeFiles/pqxx.dir/result.cxx.obj	bdcd861bfe1475a0
-17	26719	7306730681509785	build.ninja	efa04a8117799470
+17	26719	7309304976759181	build.ninja	efa04a8117799470
 41222	44042	7300673083782473	pqxx/test/CMakeFiles/runner.dir/unit/test_float.cxx.obj	2ba35fbbef72b5e9
 5867	9110	7281558281743957	libpqxx-build/src/CMakeFiles/pqxx.dir/robusttransaction.cxx.obj	e2497bf2e7689a34
 21102	24291	7281558434030925	libpqxx-build/test/CMakeFiles/runner.dir/test39.cxx.obj	b07072b50e5284fc
@@ -49,14 +49,14 @@
 10615	13436	7281558325041955	libpqxx-build/src/CMakeFiles/pqxx.dir/transaction_base.cxx.obj	c2a733d818446350
 10811	12856	7281558319873890	libpqxx-build/src/CMakeFiles/pqxx.dir/util.cxx.obj	3603d9a084afe6f5
 24978	27843	7281558469527490	libpqxx-build/test/CMakeFiles/runner.dir/test71.cxx.obj	ad3d49a7f9878970
-51	6255	7304701934630899	spider/CMakeFiles/SpiderApp.dir/main.cpp.obj	98bfb5b9bf924a84
+46	8996	7306734018000096	spider/CMakeFiles/SpiderApp.dir/main.cpp.obj	98bfb5b9bf924a84
 14275	15319	7281558342677915	libpqxx-build/src/pqxx.lib	f61ee111bf2fe02
 49516	54780	7300673190750126	pqxx/test/CMakeFiles/runner.dir/unit/test_stream_from.cxx.obj	10d19433301569d2
 20063	22674	7281558417695103	libpqxx-build/test/CMakeFiles/runner.dir/test30.cxx.obj	27ee509d235411f7
 36707	39786	7281558588666564	libpqxx-build/test/CMakeFiles/runner.dir/unit/test_error_verbosity.cxx.obj	f2ea40650570742b
-1987	4751	7304703064631866	spider/SpiderApp.exe	4d3f33b6bcc3d30f
+2084	5044	7306740995617902	spider/SpiderApp.exe	4d3f33b6bcc3d30f
 12828	15747	7281558347881784	libpqxx-build/test/CMakeFiles/runner.dir/test01.cxx.obj	495c4bcec1311d91
-29	1987	7304703061450332	spider/CMakeFiles/SpiderApp.dir/db.cpp.obj	43a725727e8a70cb
+41	2083	7306740991839221	spider/CMakeFiles/SpiderApp.dir/db.cpp.obj	43a725727e8a70cb
 17832	21102	7281558402280311	libpqxx-build/test/CMakeFiles/runner.dir/test21.cxx.obj	b08ab629af67692c
 12108	15240	7281558343467528	libpqxx-build/test/CMakeFiles/runner.dir/test00.cxx.obj	b6b1157213ecdb16
 17759	20685	7300672850227959	pqxx/test/CMakeFiles/runner.dir/test17.cxx.obj	7d2ac760418ce4b0
@@ -84,7 +84,7 @@
 22651	25418	7281558445371202	libpqxx-build/test/CMakeFiles/runner.dir/test60.cxx.obj	594dd91612563740
 25418	28442	7281558475461633	libpqxx-build/test/CMakeFiles/runner.dir/test72.cxx.obj	4510ff6aa97acd96
 25690	28600	7281558477195204	libpqxx-build/test/CMakeFiles/runner.dir/test74.cxx.obj	99ddc7bec78940ee
-40	9789	7299494413891247	http_server/CMakeFiles/HttpServerApp.dir/http_connection.cpp.obj	d5399d320c86ef6a
+51	15879	7309301163150837	http_server/CMakeFiles/HttpServerApp.dir/http_connection.cpp.obj	d5399d320c86ef6a
 51309	54284	7300673186110333	pqxx/test/CMakeFiles/runner.dir/unit/test_string_conversion.cxx.obj	b649f4d1cb906d36
 26597	29861	7281558489453353	libpqxx-build/test/CMakeFiles/runner.dir/test75.cxx.obj	9dfd51293278d93d
 27177	30213	7281558492917424	libpqxx-build/test/CMakeFiles/runner.dir/test76.cxx.obj	f29bd3052be90b26
@@ -145,7 +145,7 @@
 53391	56337	7281558754137727	libpqxx-build/test/CMakeFiles/runner.dir/unit/test_transactor.cxx.obj	252d412336ac6977
 48829	52117	7300673164570587	pqxx/test/CMakeFiles/runner.dir/unit/test_stateless_cursor.cxx.obj	1a4c7ca5c5039f70
 56601	63056	7281558801106811	libpqxx-build/test/runner.exe	67d3cb9ad6f8437a
-69	10608	7299483349516912	http_server/CMakeFiles/HttpServerApp.dir/main.cpp.obj	14f2ed3bc256a8c1
+36	7418	7307612577450948	http_server/CMakeFiles/HttpServerApp.dir/main.cpp.obj	14f2ed3bc256a8c1
 128	2696	7300672670392921	pqxx/src/CMakeFiles/pqxx.dir/encodings.cxx.obj	f3d54773af41feaf
 67	2728	7300672670236508	pqxx/src/CMakeFiles/pqxx.dir/binarystring.cxx.obj	fef88403a6e65b9c
 49	3137	7300672674630651	pqxx/src/CMakeFiles/pqxx.dir/array.cxx.obj	14f241055891c2e7
@@ -172,7 +172,7 @@
 11079	13994	7300672783343163	pqxx/src/CMakeFiles/pqxx.dir/transaction_base.cxx.obj	3342c3252142115c
 20811	24287	7300672886225535	pqxx/test/CMakeFiles/runner.dir/test37.cxx.obj	138b03e222dcc74c
 14031	15343	7300672795247057	pqxx/src/pqxx.lib	74462c204ed04cfa
-62365	66621	7300673309570543	http_server/CMakeFiles/HttpServerApp.dir/db.cpp.obj	930767cafdf5df07
+27	2209	7308447122270929	http_server/CMakeFiles/HttpServerApp.dir/db.cpp.obj	930767cafdf5df07
 11743	14926	7300672792556609	pqxx/test/CMakeFiles/runner.dir/runner.cxx.obj	da17d3a0856c37ad
 12265	15049	7300672793831705	pqxx/test/CMakeFiles/runner.dir/test00.cxx.obj	7c07ae88d89aff14
 12383	15174	7300672795247057	pqxx/test/CMakeFiles/runner.dir/test01.cxx.obj	69dba0c07798ac03
@@ -238,11 +238,6 @@
 57777	60666	7300673249805959	pqxx/test/CMakeFiles/runner.dir/unit/test_transactor.cxx.obj	1f6bd03e3c15b456
 58022	61073	7300673253905982	pqxx/test/CMakeFiles/runner.dir/unit/test_zview.cxx.obj	f66e1c9a95fc7c65
 61074	71729	7300673324828044	pqxx/test/runner.exe	312658a214729eaf
-57	5329	7306732652857221	spider/CMakeFiles/SpiderApp.dir/main.cpp.obj	98bfb5b9bf924a84
-5331	9006	7306732663478824	spider/SpiderApp.exe	4d3f33b6bcc3d30f
-46	8996	7306734018000096	spider/CMakeFiles/SpiderApp.dir/main.cpp.obj	98bfb5b9bf924a84
-9000	13112	7306734026580689	spider/SpiderApp.exe	4d3f33b6bcc3d30f
-50	2165	7306740620067709	spider/CMakeFiles/SpiderApp.dir/db.cpp.obj	43a725727e8a70cb
-2166	5208	7306740625158261	spider/SpiderApp.exe	4d3f33b6bcc3d30f
-41	2083	7306740991839221	spider/CMakeFiles/SpiderApp.dir/db.cpp.obj	43a725727e8a70cb
-2084	5044	7306740995617902	spider/SpiderApp.exe	4d3f33b6bcc3d30f
+48	10769	7309308565112669	http_server/CMakeFiles/HttpServerApp.dir/main.cpp.obj	14f2ed3bc256a8c1
+66	13523	7309308592724845	http_server/CMakeFiles/HttpServerApp.dir/http_connection.cpp.obj	d5399d320c86ef6a
+13524	18056	7309308607515290	http_server/HttpServerApp.exe	401840db8df690ad

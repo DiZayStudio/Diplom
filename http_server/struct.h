@@ -12,3 +12,4 @@ struct Configure {
 	std::string dbUser;
 	std::string dbPass;
 };
+

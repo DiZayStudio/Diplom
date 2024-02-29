@@ -16,14 +16,14 @@ void DataBase::InsertData(const std::map<std::string, int>& words, const Link& l
 
 	// сохраняем ссылку
 	query = "INSERT INTO Documents VALUES ( nextval('documents_id_seq'::regclass), "
-		"'" + std::to_string(int(link.protocol)) + "', '" + link.hostName + "', '" + link.query + "') RETURNING id";
+		"'" + link.protocol + "', '" + link.hostName + "', '" + link.query + "') RETURNING id";
 	
 	int id_dokument = tx.query_value<int>(query);
 	//tx.commit();
 	int id_word = 0;
 	for (const auto element : words) {
 		// поиск слова в таблице 
-		query = "SELECT count(id) FROM Words WHERE word='" + element.first + "'";
+		query = "SELECT id FROM Words WHERE word='" + element.first + "'";
 		id_word = tx.query_value<int>(query);
 		if (id_word == 0) {
 			query = "INSERT INTO Words VALUES ( nextval('words_id_seq'::regclass), '" + element.first + "') RETURNING id";
@@ -47,7 +47,7 @@ void DataBase::ClearTable(const std::string tableName) {
 int DataBase::GetIdWord(const std::string word) {
 	pqxx::work tx{ *c_ };
 	// поиск слова в таблице 
-	std::string query = "SELECT count(id) FROM Words WHERE word='" + word + "'";
+	std::string query = "SELECT id FROM Words WHERE word='" + word + "'";
 	int id_word = tx.query_value<int>(query);
 	tx.exec(query);
 	return id_word;
@@ -58,7 +58,7 @@ std::map<int, int> DataBase::GetWordCount(const int idWord) {
 	// поиск слова в таблице
 	std::map<int, int> wordCount;
 
-	for (auto [docId, count] : tx.query<int, int>("SELECT docLink_id, count FROM DocumentsWords WHERE word_id=" + std::to_string(idWord)+ "'")){
+	for (auto [docId, count] : tx.query<int, int>("SELECT docLink_id, count FROM DocumentsWords WHERE word_id='" + std::to_string(idWord)+ "'")){
 		wordCount.insert({ docId , count });
 	}
 	return wordCount;
@@ -67,13 +67,8 @@ std::map<int, int> DataBase::GetWordCount(const int idWord) {
 Link DataBase::GetLink(const int docId) {
 	pqxx::work tx{ *c_ };
 	Link lk;
-	for (std::tuple<int, std::string, std::string> tpl: tx.query<int, std::string, std::string>("SELECT protocol, hostname, query FROM Documents WHERE id = '" + std::to_string(docId) + "'")) {
-		if(std::get<0>(tpl) == 0){
-			lk.protocol = ProtocolType::HTTP;
-		}
-		else {
-			lk.protocol = ProtocolType::HTTPS;
-		}
+	for (std::tuple<std::string, std::string, std::string> tpl: tx.query<std::string, std::string, std::string>("SELECT protocol, hostname, query FROM Documents WHERE id = '" + std::to_string(docId) + "'")) {
+		lk.protocol = std::get<0>(tpl);
 		lk.hostName = std::get<1>(tpl);
 		lk.query = std::get<2>(tpl);
 	}

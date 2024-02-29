@@ -9,6 +9,9 @@
 #include <regex>
 #include "db.h"
 
+#include "iniParser.h"
+#include "struct.h"
+
 namespace beast = boost::beast;
 namespace http = beast::http;
 namespace net = boost::asio;
@@ -31,7 +34,6 @@ std::string url_decode(const std::string& encoded) {
 			res += ch;
 		}
 	}
-
 	return res;
 }
 
@@ -97,7 +99,6 @@ void HttpConnection::processRequest()
 			<< "'";
 		break;
 	}
-
 	writeResponse();
 }
 
@@ -131,6 +132,24 @@ void HttpConnection::createResponseGet()
 
 void HttpConnection::createResponsePost()
 {
+	try {
+		Configure conf;
+		// Загружаем настройки 
+		IniParser iniParser;
+		// загрузка IP и Port из ini файла
+		iniParser.parse("config.ini", conf);
+
+		std::string CONST_CONNECTION = "host=" + conf.dbHost + " port=" + conf.dbPort + " dbname=" + conf.dbName +
+			" user=" + conf.dbUser + " password=" + conf.dbPass;
+
+		std::unique_ptr<pqxx::connection> c = std::make_unique<pqxx::connection>(CONST_CONNECTION);
+		db.SetConnection(std::move(c));
+
+	}
+	catch (const std::exception& e) {
+		std::cerr << e.what() << std::endl;
+	}
+
 	if (request_.target() == "/")
 	{
 		std::string s = buffers_to_string(request_.body().data());
@@ -151,6 +170,9 @@ void HttpConnection::createResponsePost()
 
 		// искомая фраза
 		std::string utf8value = convert_to_utf8(value);
+		
+		//	пример слов для поиска
+		//	utf8value = "additional album 	and name";
 
 		if (key != "search")
 		{
@@ -168,6 +190,7 @@ void HttpConnection::createResponsePost()
 		
 		int nWord = std::distance(words_begin, words_end);
 		
+		std::vector<std::string> searchResult;
 
 		if (nWord > 0) {
 			std::vector<std::string> words;
@@ -187,41 +210,39 @@ void HttpConnection::createResponsePost()
 			
 			// определение частоты упоминания
 			std::map<int, int> reng;
+			std::map<int, int>::iterator it;
 			for (int i = 0; i < nWord; ++i){
 				auto documents = db.GetWordCount(wordId[i]);
 				for (auto doc:documents) {
-					reng[doc.first] = doc.second;
+					it = reng.find(doc.first);
+					if (it != reng.end()) {
+						reng[doc.first] += doc.second;
+					}
+					else {
+						reng[doc.first] = doc.second;
+					}				
 				}	
 			}
-			
-
-			// TODO: Fetch your own search results here
-			std::vector<std::string> searchResult;
-			// выборка из базы ссылок и сохранение в вектор 
-			for (const auto& elem : reng) {
-				Link l = db.GetLink(elem.first);
-				std::string str = "";
-				if (l.protocol == ProtocolType::HTTP) {
-					str = "http//:";
-				}
-				else {
-					str = "https//:";
-				}
-				str = str + l.hostName + l.query;
-				searchResult.push_back(str);
+		
+			std::multimap<int, int> revers_map;
+			for (const auto& element : reng) {
+				revers_map.insert({ element.second, element.first });
 			}
 
-
-
-//= {
-//				"https://en.wikipedia.org/wiki/Main_Page",
-//				"https://en.wikipedia.org/wiki/Wikipedia",
-			};
+			// TODO: Fetch your own search results here
+			int i = 0;
+			// выборка из базы ссылок и сохранение в вектор 	
+			for (auto iter = revers_map.end(); iter != revers_map.begin();) {
+				iter--;
+				if (i < 10) {
+					Link l = db.GetLink(iter->second);
+					std::string str = "";
+					str = l.protocol + l.hostName + l.query;
+					searchResult.push_back(str);
+					i++;
+				}
+			}
 		}
-		else {
-			// нет слов для поиска
-		}
-
 
 		response_.set(http::field::content_type, "text/html");
 		beast::ostream(response_.body())
@@ -231,13 +252,17 @@ void HttpConnection::createResponsePost()
 			<< "<h1>Search Engine</h1>\n"
 			<< "<p>Response:<p>\n"
 			<< "<ul>\n";
-
-		for (const auto& url : searchResult) {
-
+		if (searchResult.size() != 0) {
+			for (const auto& url : searchResult) {
+				beast::ostream(response_.body())
+					<< "<li><a href=\""
+					<< url << "\">"
+					<< url << "</a></li>";
+			}
+		}
+		else {
 			beast::ostream(response_.body())
-				<< "<li><a href=\""
-				<< url << "\">"
-				<< url << "</a></li>";
+				<< "<p>There are no words to search for</p>";
 		}
 
 		beast::ostream(response_.body())

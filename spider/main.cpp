@@ -117,8 +117,8 @@ std::string RemoveHTMLTags(const std::string s) {
 
 	boost::algorithm::to_lower(str);
 
-	system("cls");
-	std::cout << str << std::endl;
+	//system("cls");
+	//std::cout << str << std::endl;
 
 	return str;
 }
@@ -195,7 +195,6 @@ void parseLink(const Link& link, int depth )
 	{
 		std::cout << e.what() << std::endl;
 	}
-
 }
 
 int main()
