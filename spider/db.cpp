@@ -38,7 +38,6 @@ void DataBase::InsertData(const std::map<std::string, int>& words, const Link& l
 	// проверка наличия данных в даблице
 	int count = 0;
 
-
 	int id_word = 0;
 	for (const auto element : words) {		
 		query = "SELECT count(id) FROM words WHERE word='" + element.first + "'";
@@ -68,4 +67,16 @@ void DataBase::ClearTable(const std::string tableName) {
 	tx.commit();
 }
 
+bool DataBase::SearchLink(const Link& link) {
+	pqxx::work tx{ *c_ };
+	int count = tx.query_value<int>("SELECT COUNT(*) FROM documents "
+						"WHERE protocol='" + link.protocol + "' AND hostName='" + link.hostName + "' AND query='" + link.query + "'");
+	if (count == 0) {
+		return true;
+	}
+	else {
+		return false;
+	}
+	
+}
 	

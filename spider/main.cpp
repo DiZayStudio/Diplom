@@ -71,7 +71,13 @@ std::vector<std::string> getHtmlLink(const std::string html) {
 
 	for (std::sregex_iterator i = link_begin; i != link_end; ++i) {
 		std::smatch match = *i;
-		links.push_back(match.str());
+		std::string sTemp = match.str();
+//		int index = sTemp.find("<a href=\"");
+//		sTemp.replace(0, index, "");
+		std::regex ahref("<a href=\"");
+		sTemp = regex_replace(sTemp, ahref, " ");
+
+		links.push_back(sTemp);
 	}	
 	return links;
 }
@@ -145,9 +151,7 @@ void parseLink(const Link& link, int depth )
 
 		// Сохранение данных в БД 
 		db.InsertData(words, link);
-
-	//	std::cout << "Text content:" << std::endl;
-	//	std::cout << text << std::endl;
+		std::cout << "Stranica: (" << link.protocol << link.hostName << link.query << ") proindeksirovana" << std::endl;
 
 		// TODO: Collect more links from HTML code and add them to the parser like that:
 		std::vector<Link> links;
@@ -156,13 +160,21 @@ void parseLink(const Link& link, int depth )
 		std::vector<std::string> linkStr = getHtmlLink(html);
 		for (int i = 0; i < linkStr.size(); ++i ) {
 			Link tmp;
-			std::cout << linkStr[i] << std::endl;
-			std::regex ex("(http[s]?:\/\/)(\\w{3}\\.)*(\\w+\\.\\w+)?(\\.\\w+)?([\/\\w+-_&\\.]+)");
+			std::regex ex("(http[s]?:\/\/)?(\\w{3}\\.)*(\\w+\\.\\w+)?(\\.\\w+)?([\/\\w+-_&\\.]+)");
 			std::cmatch what;
 			if (std::regex_search(linkStr[i].c_str(), what, ex)) {
-				tmp.protocol = std::string(what[1].first, what[1].second);
+				if (what[1].matched) {
+					tmp.protocol = std::string(what[1].first, what[1].second);
+				}
+				else {
+					tmp.protocol = link.protocol;
+				}
+				
 				if (what[2].matched) {
 					tmp.hostName = std::string(what[2].first, what[2].second);
+				}
+				else {
+					tmp.hostName = link.hostName;
 				}
 				if (what[3].matched) {
 					tmp.hostName += std::string(what[3].first, what[3].second);
@@ -174,9 +186,7 @@ void parseLink(const Link& link, int depth )
 					tmp.query = std::string(what[5].first, what[5].second);
 				}
 				links.push_back(tmp);
-			}
-
-			std::cout << "Stranica:" << link.protocol << link.hostName << link.query << " proindecsirovana" << std::endl;
+			}	
 		}
 
 		if (depth > 0) {
@@ -186,7 +196,9 @@ void parseLink(const Link& link, int depth )
 			size_t index = 0;
 			for (auto& subLink : links)
 			{
-				tasks.push([subLink, depth]() { parseLink(subLink, depth - 1); });
+				if (db.SearchLink(subLink)) {
+					tasks.push([subLink, depth]() { parseLink(subLink, depth - 1); });
+				}
 			}
 			cv.notify_one();
 		}

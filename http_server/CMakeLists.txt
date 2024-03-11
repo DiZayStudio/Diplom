@@ -9,7 +9,6 @@ add_executable(HttpServerApp
 	link.h
 	db.h 
 	db.cpp
-	config.ini
 	)
 
 target_compile_features(HttpServerApp PRIVATE cxx_std_17) 
@@ -20,5 +19,5 @@ target_include_directories(HttpServerApp PRIVATE ${Boost_INCLUDE_DIRS})
 
 target_link_libraries(HttpServerApp ${Boost_LIBRARIE})
 
-target_link_libraries(HttpServerApp OpenSSL::SSL)
+#target_link_libraries(HttpServerApp OpenSSL::SSL)
 

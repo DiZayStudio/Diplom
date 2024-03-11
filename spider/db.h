@@ -15,7 +15,8 @@ public:
 
     void CreateTable();
     void InsertData(const std::map<std::string, int>& words, const Link& link);
-    void DataBase::ClearTable(const std::string tableName);
+    void ClearTable(const std::string tableName);
+    bool SearchLink(const Link& link);
 
 private:  
 
