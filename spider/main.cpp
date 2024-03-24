@@ -228,6 +228,8 @@ int main()
 	std::unique_ptr<pqxx::connection> c = std::make_unique<pqxx::connection>(CONST_CONNECTION);
 	db.SetConnection(std::move(c));
 
+	//db.DeleteTable();
+
 	db.CreateTable();
 	}
 	catch (const std::exception& e) {

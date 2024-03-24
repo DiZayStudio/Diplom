@@ -47,10 +47,17 @@ void DataBase::ClearTable(const std::string tableName) {
 int DataBase::GetIdWord(const std::string word) {
 	pqxx::work tx{ *c_ };
 	// поиск слова в таблице 
-	std::string query = "SELECT id FROM Words WHERE word='" + word + "'";
-	int id_word = tx.query_value<int>(query);
-	tx.exec(query);
-	return id_word;
+	std::string query = "SELECT count(id) FROM Words WHERE word='" + word + "'";
+	int countWord = tx.query_value<int>(query);
+	if (countWord != 0) {
+		std::string query = "SELECT id FROM Words WHERE word='" + word + "'";
+		int id_word = tx.query_value<int>(query);
+		tx.exec(query);
+		return id_word;
+	}
+	else {
+		return 0;
+	}
 }
 
 std::map<int, int> DataBase::GetWordCount(const int idWord) {

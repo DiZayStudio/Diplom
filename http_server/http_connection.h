@@ -5,6 +5,8 @@
 #include <boost/beast/version.hpp>
 #include <boost/asio.hpp>
 
+#include "struct.h"
+
 namespace beast = boost::beast;
 namespace http = beast::http;
 namespace net = boost::asio;
@@ -12,7 +14,10 @@ using tcp = boost::asio::ip::tcp;
 
 class HttpConnection : public std::enable_shared_from_this<HttpConnection>
 {
+
 protected:
+
+	Configure config;
 
 	tcp::socket socket_;
 
@@ -36,7 +41,8 @@ protected:
 	void checkDeadline();
 
 public:
+
 	HttpConnection(tcp::socket socket);
-	void start();
+	void start(const Configure conf);
 };
 

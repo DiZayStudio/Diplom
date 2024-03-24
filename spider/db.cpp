@@ -9,18 +9,23 @@ void DataBase::SetConnection(std::unique_ptr<pqxx::connection> in_c)
 	c_ = std::move(in_c);
 }
 
+void DataBase::DeleteTable() {
+	pqxx::work tx{ *c_ };
+
+	tx.exec("DROP table DocumentsWords");
+	tx.exec("DROP table Documents");
+	tx.exec("DROP table Words");
+
+	tx.commit();
+}
+
+
 void DataBase::CreateTable() {
 	pqxx::work tx{ *c_ };
 
-	//tx.exec("DROP table Documents");
-	//tx.exec("DROP table Words");
-	//tx.exec("DROP table DocumentsWords");
-	//tx.commit();
-
-	tx.exec("CREATE TABLE IF NOT EXISTS Documents (id SERIAL PRIMARY KEY, protocol VARCHAR(32) NOT NULL, "
-			"hostName VARCHAR(250) NOT NULL, query VARCHAR(250) NOT NULL); ");
+	tx.exec("CREATE TABLE IF NOT EXISTS Documents (id SERIAL PRIMARY KEY, protocol VARCHAR(32) NOT NULL, hostName VARCHAR(250) NOT NULL, query VARCHAR(250) NOT NULL); ");
 	tx.exec("CREATE TABLE IF NOT EXISTS Words (id SERIAL PRIMARY KEY, word VARCHAR(32) UNIQUE NOT NULL); ");
-	tx.exec("CREATE TABLE IF NOT EXISTS DocumentsWords (docLink_id integer NOT NULL, word_id integer NOT NULL, count integer NOT NULL); ");
+	tx.exec("CREATE TABLE IF NOT EXISTS DocumentsWords (docLink_id integer NOT NULL REFERENCES Documents (id), word_id integer NOT NULL REFERENCES Words (id), count integer NOT NULL); ");
 
 	tx.commit();
 }

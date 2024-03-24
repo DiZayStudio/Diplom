@@ -11,13 +11,15 @@
 #include "iniParser.h"
 #include "struct.h"
 
+Configure conf;
+
 void httpServer(tcp::acceptor& acceptor, tcp::socket& socket)
 {
 	acceptor.async_accept(socket,
 		[&](beast::error_code ec)
 		{
 			if (!ec)
-				std::make_shared<HttpConnection>(std::move(socket))->start();
+				std::make_shared<HttpConnection>(std::move(socket))->start(conf);
 			httpServer(acceptor, socket);
 		});
 }
@@ -31,16 +33,15 @@ int main(int argc, char* argv[])
 	setvbuf(stdout, nullptr, _IOFBF, 1000);
 
 	try
-	{
-		Configure conf;
+	{	
 		// Загружаем настройки 
 		IniParser iniParser;
 		// загрузка IP и Port из ini файла
 		iniParser.parse("config.ini", conf);
 		auto const address = net::ip::make_address(conf.host);
 		unsigned short port = conf.port;
-	//	auto const address = net::ip::make_address("0.0.0.0");
-	//	unsigned short port = 8080;
+
+
 
 		net::io_context ioc{1};
 

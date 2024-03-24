@@ -9,9 +9,6 @@
 #include <regex>
 #include "db.h"
 
-#include "iniParser.h"
-#include "struct.h"
-
 namespace beast = boost::beast;
 namespace http = beast::http;
 namespace net = boost::asio;
@@ -48,8 +45,9 @@ HttpConnection::HttpConnection(tcp::socket socket)
 }
 
 
-void HttpConnection::start()
+void HttpConnection::start(const Configure conf)
 {
+	config = conf;
 	readRequest();
 	checkDeadline();
 }
@@ -133,14 +131,9 @@ void HttpConnection::createResponseGet()
 void HttpConnection::createResponsePost()
 {
 	try {
-		Configure conf;
-		// «агружаем настройки 
-		IniParser iniParser;
-		// загрузка IP и Port из ini файла
-		iniParser.parse("config.ini", conf);
 
-		std::string CONST_CONNECTION = "host=" + conf.dbHost + " port=" + conf.dbPort + " dbname=" + conf.dbName +
-			" user=" + conf.dbUser + " password=" + conf.dbPass;
+		std::string CONST_CONNECTION = "host=" + config.dbHost + " port=" + config.dbPort + " dbname=" + config.dbName +
+			" user=" + config.dbUser + " password=" + config.dbPass;
 
 		std::unique_ptr<pqxx::connection> c = std::make_unique<pqxx::connection>(CONST_CONNECTION);
 		db.SetConnection(std::move(c));
@@ -212,34 +205,37 @@ void HttpConnection::createResponsePost()
 			std::map<int, int> reng;
 			std::map<int, int>::iterator it;
 			for (int i = 0; i < nWord; ++i){
-				auto documents = db.GetWordCount(wordId[i]);
-				for (auto doc:documents) {
-					it = reng.find(doc.first);
-					if (it != reng.end()) {
-						reng[doc.first] += doc.second;
+				if (wordId[i] != 0) {
+					auto documents = db.GetWordCount(wordId[i]);
+					for (auto doc : documents) {
+						it = reng.find(doc.first);
+						if (it != reng.end()) {
+							reng[doc.first] += doc.second;
+						}
+						else {
+							reng[doc.first] = doc.second;
+						}
 					}
-					else {
-						reng[doc.first] = doc.second;
-					}				
-				}	
+				}
 			}
-		
-			std::multimap<int, int> revers_map;
-			for (const auto& element : reng) {
-				revers_map.insert({ element.second, element.first });
-			}
+			if (reng.size() != 0) {
+				std::multimap<int, int> revers_map;
+				for (const auto& element : reng) {
+					revers_map.insert({ element.second, element.first });
+				}
 
-			// TODO: Fetch your own search results here
-			int i = 0;
-			// выборка из базы ссылок и сохранение в вектор 	
-			for (auto iter = revers_map.end(); iter != revers_map.begin();) {
-				iter--;
-				if (i < 10) {
-					Link l = db.GetLink(iter->second);
-					std::string str = "";
-					str = l.protocol + l.hostName + l.query;
-					searchResult.push_back(str);
-					i++;
+				// TODO: Fetch your own search results here
+				int i = 0;
+				// выборка из базы ссылок и сохранение в вектор 	
+				for (auto iter = revers_map.end(); iter != revers_map.begin();) {
+					iter--;
+					if (i < 10) {
+						Link l = db.GetLink(iter->second);
+						std::string str = "";
+						str = l.protocol + l.hostName + l.query;
+						searchResult.push_back(str);
+						i++;
+					}
 				}
 			}
 		}
@@ -262,7 +258,7 @@ void HttpConnection::createResponsePost()
 		}
 		else {
 			beast::ostream(response_.body())
-				<< "<p>There are no words to search for</p>";
+				<< "<p>No words were found for your query</p>";
 		}
 
 		beast::ostream(response_.body())
@@ -307,4 +303,3 @@ void HttpConnection::checkDeadline()
 			}
 		});
 }
-
