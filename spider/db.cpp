@@ -19,7 +19,6 @@ void DataBase::DeleteTable() {
 	tx.commit();
 }
 
-
 void DataBase::CreateTable() {
 	pqxx::work tx{ *c_ };
 

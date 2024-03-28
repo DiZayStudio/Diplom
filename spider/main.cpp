@@ -72,10 +72,11 @@ std::vector<std::string> getHtmlLink(const std::string html) {
 	for (std::sregex_iterator i = link_begin; i != link_end; ++i) {
 		std::smatch match = *i;
 		std::string sTemp = match.str();
-//		int index = sTemp.find("<a href=\"");
-//		sTemp.replace(0, index, "");
+
 		std::regex ahref("<a href=\"");
-		sTemp = regex_replace(sTemp, ahref, " ");
+		sTemp = regex_replace(sTemp, ahref, "");
+		std::regex rgx("\"");
+		sTemp = regex_replace(sTemp, rgx, "");
 
 		links.push_back(sTemp);
 	}	
@@ -160,9 +161,10 @@ void parseLink(const Link& link, int depth )
 		std::vector<std::string> linkStr = getHtmlLink(html);
 		for (int i = 0; i < linkStr.size(); ++i ) {
 			Link tmp;
-			std::regex ex("(http[s]?:\/\/)?(\\w{3}\\.)*(\\w+\\.\\w+)?(\\.\\w+)?([\/\\w+-_&\\.]+)");
+			std::regex ex("(http[s]?:\/\/)?(\\w{3}\\.)?(\\w+[\\.\\w+]+)?([/\\w+]+:?\\w+[\\.\\w+]?(php)?)*(\\?\\S+)?", std::regex_constants::ECMAScript);
 			std::cmatch what;
 			if (std::regex_search(linkStr[i].c_str(), what, ex)) {
+				// протокол
 				if (what[1].matched) {
 					tmp.protocol = std::string(what[1].first, what[1].second);
 				}
@@ -173,17 +175,14 @@ void parseLink(const Link& link, int depth )
 				if (what[2].matched) {
 					tmp.hostName = std::string(what[2].first, what[2].second);
 				}
-				else {
-					tmp.hostName = link.hostName;
-				}
 				if (what[3].matched) {
 					tmp.hostName += std::string(what[3].first, what[3].second);
 				}
-				if (what[4].matched) {
-					tmp.hostName += std::string(what[4].first, what[4].second);
+				else {
+					tmp.hostName = link.hostName;
 				}
-				if (what[5].matched) {
-					tmp.query = std::string(what[5].first, what[5].second);
+				if (what[4].matched) {
+					tmp.query = std::string(what[4].first, what[4].second);
 				}
 				links.push_back(tmp);
 			}	
