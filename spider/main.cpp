@@ -33,7 +33,7 @@ bool exitThreadPool = false;
 DataBase db;
 
 std::map<std::string, int> getWorldsAndIndex(const std::string text) {
-	std::regex word_regex("(\\w{3,30})+"); //([.-]?\w{3,32})+    "[^\\s]+"
+	std::regex word_regex("(\\b\\w{3,32}\\b)", std::regex_constants::ECMAScript);
 	auto words_begin =
 		std::sregex_iterator(text.begin(), text.end(), word_regex);
 	auto words_end = std::sregex_iterator();
@@ -42,9 +42,7 @@ std::map<std::string, int> getWorldsAndIndex(const std::string text) {
 
 	for (std::sregex_iterator i = words_begin; i != words_end; ++i) {
 		std::smatch match = *i;
-		if (match.str().size() > 2) {
-			words.push_back(match.str());
-		}
+		words.push_back(match.str());
 	}
 
 	// Индексация слов
@@ -70,14 +68,11 @@ std::vector<std::string> getHtmlLink(const std::string html) {
 	std::vector<std::string> words;
 
 	for (std::sregex_iterator i = link_begin; i != link_end; ++i) {
+		std::string sTemp;
 		std::smatch match = *i;
-		std::string sTemp = match.str();
-
-		std::regex ahref("<a href=\"");
-		sTemp = regex_replace(sTemp, ahref, "");
-		std::regex rgx("\"");
-		sTemp = regex_replace(sTemp, rgx, "");
-
+			if (match[1].matched) {
+				sTemp = std::string(match[1].first, match[1].second);
+			}
 		links.push_back(sTemp);
 	}	
 	return links;
@@ -106,21 +101,21 @@ std::string RemoveHTMLTags(const std::string s) {
 	str.replace(0,index,"");
 
 	// Удаление скриптов
-	std::regex script("<script[\\s\\S]*?>[\\s\\S]*?<\/script>");
+	std::regex script("<script[\\s\\S]*?>[\\s\\S]*?<\/script>", std::regex_constants::ECMAScript);
 	str = regex_replace(str, script, " ");
 
-	std::regex pattern_style("<style[^>]*?>[\\s\\S]*?<\/style>");  
+	std::regex pattern_style("<style[^>]*?>[\\s\\S]*?<\/style>", std::regex_constants::ECMAScript);
 	str = regex_replace(str, pattern_style, " ");
 
+	std::regex pattern_a("<a[^>]*?>[\\s\\S]*?<\/a>", std::regex_constants::ECMAScript);
+	str = regex_replace(str, pattern_a, " ");
+
 	// Удаление HTML тегов
-	std::regex pattern("\<(/?[^\>]+)\>"); //<[^>]*>  
+	std::regex pattern("\\<(\/?[^\\>]+)\\>", std::regex_constants::ECMAScript);
 	str = regex_replace(str, pattern, " ");
 
-	std::regex re("(\n|\t|[0-9])");
-	str = regex_replace(str, re, "");
-
-	std::regex point(",");
-	str = regex_replace(str, point, " ");
+	std::regex re("(\\n|\\t|[0-9]|\\s+)", std::regex_constants::ECMAScript);
+	str = regex_replace(str, re, " ");
 
 	boost::algorithm::to_lower(str);
 
@@ -151,9 +146,11 @@ void parseLink(const Link& link, int depth )
 		std::map<std::string, int> words = getWorldsAndIndex(text);
 
 		// Сохранение данных в БД 
-		db.InsertData(words, link);
-		std::cout << "Stranica: (" << link.protocol << link.hostName << link.query << ") proindeksirovana" << std::endl;
-
+		if (db.SearchLink(link)) {
+			db.InsertData(words, link);
+			std::cout << "Stranica proindeksirovana: " << link.protocol << link.hostName << link.query << std::endl;
+		} else 
+			std::cout << "Stranica uge est v BD: " << link.protocol << link.hostName << link.query << std::endl;
 		// TODO: Collect more links from HTML code and add them to the parser like that:
 		std::vector<Link> links;
 		
@@ -161,28 +158,31 @@ void parseLink(const Link& link, int depth )
 		std::vector<std::string> linkStr = getHtmlLink(html);
 		for (int i = 0; i < linkStr.size(); ++i ) {
 			Link tmp;
-			std::regex ex("(http[s]?:\/\/)?(\\w{3}\\.)?(\\w+[\\.\\w+]+)?([/\\w+]+:?\\w+[\\.\\w+]?(php)?)*(\\?\\S+)?", std::regex_constants::ECMAScript);
+			// (http[s]?:\/\/)?(\\w{3}\\.)?(\\w+[\\.\\w+]+)?([/\\\S+]+:?\\w+[\\.\\w+]?(php)?)*(\\?\\S+)?
+			std::regex ex("(http[s]?:)*(\/\/)?(\\w{3}\\.)?(\\w+[\\.\\w+]+)?([\/\\S+]*)*", std::regex_constants::ECMAScript);
 			std::cmatch what;
 			if (std::regex_search(linkStr[i].c_str(), what, ex)) {
 				// протокол
 				if (what[1].matched) {
 					tmp.protocol = std::string(what[1].first, what[1].second);
+					if (what[2].matched) {
+						tmp.protocol += std::string(what[2].first, what[2].second);
+					}
 				}
 				else {
 					tmp.protocol = link.protocol;
-				}
-				
-				if (what[2].matched) {
-					tmp.hostName = std::string(what[2].first, what[2].second);
-				}
+				}		
 				if (what[3].matched) {
-					tmp.hostName += std::string(what[3].first, what[3].second);
+					tmp.hostName = std::string(what[3].first, what[3].second);
+				}
+				if (what[4].matched) {
+					tmp.hostName += std::string(what[4].first, what[4].second);
 				}
 				else {
 					tmp.hostName = link.hostName;
 				}
-				if (what[4].matched) {
-					tmp.query = std::string(what[4].first, what[4].second);
+				if (what[5].matched) {
+					tmp.query = std::string(what[5].first, what[5].second);
 				}
 				links.push_back(tmp);
 			}	

@@ -22,8 +22,8 @@ void DataBase::DeleteTable() {
 void DataBase::CreateTable() {
 	pqxx::work tx{ *c_ };
 
-	tx.exec("CREATE TABLE IF NOT EXISTS Documents (id SERIAL PRIMARY KEY, protocol VARCHAR(32) NOT NULL, hostName VARCHAR(250) NOT NULL, query VARCHAR(250) NOT NULL); ");
-	tx.exec("CREATE TABLE IF NOT EXISTS Words (id SERIAL PRIMARY KEY, word VARCHAR(32) UNIQUE NOT NULL); ");
+	tx.exec("CREATE TABLE IF NOT EXISTS Documents (id SERIAL PRIMARY KEY, protocol VARCHAR(100) NOT NULL, hostName VARCHAR(250) NOT NULL, query VARCHAR(250) NOT NULL); ");
+	tx.exec("CREATE TABLE IF NOT EXISTS Words (id SERIAL PRIMARY KEY, word VARCHAR(33) NOT NULL); ");
 	tx.exec("CREATE TABLE IF NOT EXISTS DocumentsWords (docLink_id integer NOT NULL REFERENCES Documents (id), word_id integer NOT NULL REFERENCES Words (id), count integer NOT NULL); ");
 
 	tx.commit();
@@ -36,7 +36,7 @@ void DataBase::InsertData(const std::map<std::string, int>& words, const Link& l
 	// сохраняем ссылку
 	query = "INSERT INTO Documents VALUES ( nextval('documents_id_seq'::regclass), "
 		"'" + (link.protocol) + "', '" + link.hostName + "', '" + link.query + "') RETURNING id";
-	
+
 	int id_dokument = tx.query_value<int>(query);
 
 	// проверка наличия данных в даблице
@@ -49,7 +49,6 @@ void DataBase::InsertData(const std::map<std::string, int>& words, const Link& l
 		
 		// если таблица не пустая, поиск слова 	
 		if (count != 0) {
-			//query = "SELECT Count(*), coalesce(max(id), 0) AS id FROM words WHERE word='" + element.first + "'";
 			query = "SELECT id FROM words WHERE word='" + element.first + "'";
 			id_word = tx.query_value<int>(query);
 		} else {

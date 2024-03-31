@@ -5,19 +5,15 @@ project(CppDiplomProject)
 # TODO: Define by your own needs:
 set(OPENSSL_ROOT_DIR "C:\\Program Files\\OpenSSL-Win64")
 
-set(BOOST_ROOT "C:/local/boost_1_84_0")
+set(BOOST_ROOT "C:\\local\\boost_1_84_0")
 
-set(libpqxx_DIR "C:/libpq")
+set(libpqxx_DIR "C:\\Work\\libpqxx-7.7.5")
 
 # TODO: If you are running on Windows below 10, change this:
 add_compile_definitions(_WIN32_WINNT=0x0A01)
 
 # Boost:
 find_package(Boost 1.84.0 REQUIRED COMPONENTS system thread locale)
-
-if(NOT Boost_FOUND)
-    message(FATAL_ERROR "Could not find Boost")
-endif()
 
 # PQXX
 set(PostgreSQL_ADDITIONAL_VERSIONS "15")
