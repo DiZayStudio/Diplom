@@ -1,6 +1,5 @@
 #pragma once
 #include <memory>
-#include <mutex>
 #include <pqxx/pqxx>
 #include "link.h"
 
@@ -18,6 +17,7 @@ public:
     int DataBase::GetIdWord(const std::string word);
     std::map<int, int> DataBase::GetWordCount(const int idWord);
     Link DataBase::GetLink(const int id);
+
 
 private:  
 

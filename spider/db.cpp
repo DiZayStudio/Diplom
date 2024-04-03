@@ -1,6 +1,9 @@
 #include "db.h"
 #include <iostream>
 #include <string.h>
+#include <mutex>
+
+std::mutex mtxDb;
 
 DataBase::DataBase(){}
 
@@ -30,19 +33,20 @@ void DataBase::CreateTable() {
 }
 
 void DataBase::InsertData(const std::map<std::string, int>& words, const Link& link) {
+	
 	pqxx::work tx{ *c_ };
 	std::string query;
 
+	mtxDb.lock();
 	// сохраняем ссылку
 	query = "INSERT INTO Documents VALUES ( nextval('documents_id_seq'::regclass), "
 		"'" + (link.protocol) + "', '" + link.hostName + "', '" + link.query + "') RETURNING id";
 
 	int id_dokument = tx.query_value<int>(query);
-
 	// проверка наличия данных в даблице
 	int count = 0;
-
 	int id_word = 0;
+
 	for (const auto element : words) {		
 		query = "SELECT count(id) FROM words WHERE word='" + element.first + "'";
 		count = tx.query_value<int>(query);
@@ -62,6 +66,7 @@ void DataBase::InsertData(const std::map<std::string, int>& words, const Link& l
 		tx.exec(query);
 	}
 	tx.commit();
+	mtxDb.unlock();
 };
 
 void DataBase::ClearTable(const std::string tableName) {
