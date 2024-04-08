@@ -8,6 +8,7 @@
 #include <pqxx/pqxx>
 #include <regex>
 #include "db.h"
+#include <boost/algorithm/string.hpp>
 
 namespace beast = boost::beast;
 namespace http = beast::http;
@@ -166,6 +167,8 @@ void HttpConnection::createResponsePost()
 		
 		//	пример слов для поиска
 		//	utf8value = "additional album 	and name";
+
+		boost::algorithm::to_lower(utf8value);
 
 		if (key != "search")
 		{

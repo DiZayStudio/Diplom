@@ -4,7 +4,6 @@
 #include <mutex>
 
 std::mutex mtxDb;
-
 DataBase::DataBase(){}
 
 void DataBase::SetConnection(std::unique_ptr<pqxx::connection> in_c)
@@ -37,7 +36,7 @@ void DataBase::InsertData(const std::map<std::string, int>& words, const Link& l
 	pqxx::work tx{ *c_ };
 	std::string query;
 
-	mtxDb.lock();
+	std::lock_guard<std::mutex> lock(mtxDb);
 	// сохраняем ссылку
 	query = "INSERT INTO Documents VALUES ( nextval('documents_id_seq'::regclass), "
 		"'" + (link.protocol) + "', '" + link.hostName + "', '" + link.query + "') RETURNING id";
@@ -66,7 +65,6 @@ void DataBase::InsertData(const std::map<std::string, int>& words, const Link& l
 		tx.exec(query);
 	}
 	tx.commit();
-	mtxDb.unlock();
 };
 
 void DataBase::ClearTable(const std::string tableName) {

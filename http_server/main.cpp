@@ -41,8 +41,6 @@ int main(int argc, char* argv[])
 		auto const address = net::ip::make_address(conf.host);
 		unsigned short port = conf.port;
 
-
-
 		net::io_context ioc{1};
 
 		tcp::acceptor acceptor{ioc, { address, port }};

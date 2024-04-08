@@ -2,7 +2,6 @@
 #include <fstream>
 #include <vector>
 #include <string>
-//#include <boost/locale.hpp>
 #include <boost/algorithm/string.hpp>
 
 #include <regex>
@@ -159,7 +158,7 @@ void parseLink(const Link& link, int depth )
 		for (int i = 0; i < linkStr.size(); ++i ) {
 			Link tmp;
 			// (http[s]?:\/\/)?(\\w{3}\\.)?(\\w+[\\.\\w+]+)?([/\\\S+]+:?\\w+[\\.\\w+]?(php)?)*(\\?\\S+)?
-			std::regex ex("(http[s]?:)*(\/\/)?(\\w{3}\\.)?(\\w+[\\.\\w+]+)?([\/\\S+]*)*", std::regex_constants::ECMAScript);
+			std::regex ex("(http[s]?:)*(\/\/)?(\\w{3}\\.)?(\\w+[\\.\\w+]+)?([\/\\w+.?:?=?&?;]*)*(#\\w+)?", std::regex_constants::ECMAScript);
 			std::cmatch what;
 			if (std::regex_search(linkStr[i].c_str(), what, ex)) {
 				// протокол
